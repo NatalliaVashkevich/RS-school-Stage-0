@@ -19,3 +19,60 @@
     --second-family: "Arial", sans-serif;
     --third-family: "Inter", sans-serif;
   }
+
+  html {
+    scroll-behavior: smooth; 
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	/*outline: 2px solid deeppink;/*видимые границы*/
+}
+  
+  .header {
+height: 60px;
+width: 1200px;
+margin: 30px 40px auto;
+display: flex;
+justify-content: space-between; 
+  }
+
+  .logo-title {
+	color: var(--color-primary);
+	font-family: var(--font-family);
+	font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+  }
+  .logo-subtitle {
+	font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--color-light-xl);
+  }
+
+  .nav-list {
+	display: flex;
+	width: 443px;
+	height: 60px;
+	justify-content: space-between;
+    list-style: none;
+	align-items: center;
+
+  }
+
+  .nav-item {
+	font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--color-dark-s);
+  }
+
+  .nav-link {
+text-decoration: none;
+  }
