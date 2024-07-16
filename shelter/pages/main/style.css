@@ -33,13 +33,11 @@
 
 * {
     box-sizing: border-box;
-	}
+  }
   
   .logo {
     padding-left: 0px;
     line-height: 0;
-    
-
   }
 
   .header {
@@ -75,7 +73,6 @@ background-color: var(--start-screen-gradient-background)/*, radial-gradient(237
     }
 
   .nav-list {
-    /*outline: 2px solid deeppink; /*видимые границы*/
 	display: flex;
 	width: 443px;
 	height: 40px;
@@ -111,11 +108,13 @@ background-color: var(--start-screen-gradient-background)/*, radial-gradient(237
 
   .nav-link-active {
     border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 3px;
     font-family: var(--second-family);
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
     color: var(--color-dark-s);
+    text-decoration: none;
     pointer-events: none; /*неактивная ссылка*/
   }
 
@@ -176,10 +175,10 @@ background-color: var(--start-screen-gradient-background)/*, radial-gradient(237
     align-content: flex-end;
     padding-left: 30px;
     margin-bottom: -5px;
-    
   }
 
-  .about {
+
+  #about {
     display: flex;
     justify-content: space-between;
     align-content: flex-start;
@@ -200,13 +199,17 @@ background-color: var(--start-screen-gradient-background)/*, radial-gradient(237
   padding-right: 220px;
   padding-left: 120px;
   }
-  .about-pets-heading {
+
+  h2 {
     font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-    color: var(--color-dark-l);
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+letter-spacing: 0.06em;
+color: var(--color-dark-l);
+  }
+
+  .about-pets-heading {
     padding-right: 20px;
     padding-bottom: 0px;
   }
@@ -217,4 +220,63 @@ background-color: var(--start-screen-gradient-background)/*, radial-gradient(237
     line-height: 160%;
     color: var(--color-dark-xl);
     margin-top: 20px;
+  }
+
+
+  #our-friends {
+ outline: 2px solid deeppink; /*видимые границы*/
+display: flex;
+flex-direction: column;
+height: 877px;
+  }
+
+  .our-friends-heading {
+    outline: 2px solid deeppink;
+    text-align: center;
+    padding-top: 52px;
+    padding-left: 410px;
+    padding-right: 410px;
+  }
+
+  .slider {
+    display: flex;
+    }
+
+  .buttom-arrow {
+    border-radius: 100px;
+    border: 2px solid var(--color-primary);
+  }
+
+  .card {
+    outline: 2px solid green;
+    display: flex;
+    flex-direction: column;   
+    width: 270px;
+    height: 435px;
+    margin-top: 28px;
+
+
+  }
+
+  .pet-name {
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 20px;
+letter-spacing: 0.06em;
+text-align: center;
+color: var(--color-dark-l);
+  }
+
+  .card-button {
+    display: flex;
+align-items: center;
+justify-content: flex-start;
+flex-direction: column;
+margin-left: 45px;
+gap: 10px;
+border: 2px solid var(--color-primary);
+border-radius: 100px;
+padding: 15px 45px;
+width: 187px;
+height: 52px;
   }
