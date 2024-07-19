@@ -82,7 +82,7 @@ background-color: var(--start-screen-gradient-background)/*, radial-gradient(237
   margin-top: 40px;
   padding: 0;
 	justify-content: space-between;
-    list-style: none;
+  list-style: none;
 	align-items: center;
   }
 
@@ -124,7 +124,8 @@ background-color: var(--start-screen-gradient-background)/*, radial-gradient(237
     display: flex;
     justify-content: flex-start;
     height: 808px;
-    background-color: var(--start-screen-gradient-background)/*, radial-gradient(237.5% 111.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 100%), url(../../assets/images/start-screen-background.jpg)*/;
+    background: var(--start-screen-gradient-background), radial-gradient(237.5% 111.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 100%), url(../../assets/images/start-screen-background.jpg);
+    background: url(../../assets/images/start-screen-background.jpg);
   }
 .start-screen {
   width: 40%;
@@ -319,7 +320,6 @@ color: var(--color-dark-3xl);
   }
 
   #help {
-    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -329,14 +329,12 @@ color: var(--color-dark-3xl);
     }
 
   .help-heading {
-    
 text-align: center;
 padding-top: 0;
 margin-top: 0;
   }
 
   .help-list {
-    
 display: flex;
 flex-flow: row wrap;
 justify-content: center;
@@ -350,7 +348,6 @@ column-gap: 120px;
   }
 
   .help-item {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -377,23 +374,19 @@ margin-top: 30px;
   }
 
   .donation {
-    
 height: 462px;
 background: var(--color-light-l);
 display: flex;
-      
-  }
+}
 
   
   .donation-image {
-    
     width: 505px;
     height: 261px;
     margin-left: 183px;
     margin-top: 90px;
   }
     .credit-card {
-     
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -439,8 +432,7 @@ padding: 10px 15px;
 width: 349px;
 height: 43px;
 background: var(--color-primary);
-
-  }
+}
 
   .credit-card {
     fill: var(--color-dark-3xl);
@@ -458,5 +450,64 @@ padding-left: 4px;
 
   footer {
     height: 350px;
+    display: flex;
+    justify-content: space-between;
+    background: var(--start-screen-gradient-background), radial-gradient(549.89% 73.65% at 5.73% 50%, rgb(81, 61, 47) 0%, rgb(26, 26, 28) 100%), url(../../assets/images/footer-gradient-background.png);
+    background: url(../../assets/images/footer-background.png);
+    padding-top: 27px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+        
   }
 
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    }
+    .contacts-location {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-left: 140px;
+      }
+  .contact-title {
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+letter-spacing: 0.06em;
+color: var(--color-light-xl);
+width: 300px;
+  }
+
+  .contact-item {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: 10px;
+  
+    
+  }
+
+  .contact-icon {
+    fill: var(--color-primary);
+    height: 32px;
+    padding-left: 2px;
+  }
+
+  .contact-link {
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+letter-spacing: 0.06em;
+color: var(--color-primary);
+padding-left: 15px;
+
+  }
+
+  .contact-image {
+padding-top: 12px;
+  }
