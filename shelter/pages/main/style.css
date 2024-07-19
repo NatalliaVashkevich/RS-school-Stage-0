@@ -59,6 +59,7 @@ background-color: var(--start-screen-gradient-background)/*, radial-gradient(237
     letter-spacing: 0.06em;
     text-align: flex-start;
     padding-left: 40px;
+    padding-top: 1em;
   }
   .logo-subtitle {
     font-family: var(--second-family);
@@ -70,6 +71,7 @@ background-color: var(--start-screen-gradient-background)/*, radial-gradient(237
     height: 1em;
     text-align: center;
     padding-left: 40px;
+    padding-top: 2.4em;
     }
 
   .nav-list {
@@ -251,7 +253,6 @@ background-color: var(--color-light-l);
   }
 
   .card {
-   
     display: flex;
     flex-direction: column;
     width: 270px;
@@ -318,7 +319,7 @@ color: var(--color-dark-3xl);
   }
 
   #help {
-    outline: 1px solid green;
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -328,14 +329,14 @@ color: var(--color-dark-3xl);
     }
 
   .help-heading {
-    outline: 1px solid rebeccapurple;
+    
 text-align: center;
 padding-top: 0;
 margin-top: 0;
   }
 
   .help-list {
-    outline: 1px solid blue;
+    
 display: flex;
 flex-flow: row wrap;
 justify-content: center;
@@ -349,7 +350,7 @@ column-gap: 120px;
   }
 
   .help-item {
-    outline: 1px solid blueviolet;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -374,3 +375,88 @@ text-align: center;
 color: var(--color-dark-l);
 margin-top: 30px;
   }
+
+  .donation {
+    
+height: 462px;
+background: var(--color-light-l);
+display: flex;
+      
+  }
+
+  
+  .donation-image {
+    
+    width: 505px;
+    height: 261px;
+    margin-left: 183px;
+    margin-top: 90px;
+  }
+    .credit-card {
+     
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 3.2em;
+    padding-left: 1.9em;
+    width: 380px;
+    padding-right: 20px;
+    }  
+    
+  .donation-heading{
+    padding-right: 30px;
+  }
+  .donate-subheading {
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 15px;
+line-height: 110%;
+letter-spacing: 0.06em;
+color: var(--color-dark-l);
+margin-top: -0.6em;
+margin-bottom: 1.2em;
+  }
+
+  .legal-information {
+    font-family: var(--second-family);
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 150%;
+color: var(--color-dark-m);
+width: 380px;
+padding-top: 10px;
+  }
+
+ .credit-card-content {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+
+gap: 10px;
+border-radius: 9px;
+padding: 10px 15px;
+width: 349px;
+height: 43px;
+background: var(--color-primary);
+
+  }
+
+  .credit-card {
+    fill: var(--color-dark-3xl);
+  }
+
+  .card-number {
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+letter-spacing: 0.06em;
+color: var(--color-dark-l);
+padding-left: 4px;
+  }
+
+  footer {
+    height: 350px;
+  }
+
