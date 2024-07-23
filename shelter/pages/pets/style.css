@@ -23,29 +23,11 @@
   html {
     scroll-behavior: smooth;
   }
-
-  h2 {
-
-  }
-
-  h3 {
-
-  }
-
-  h4 {
-
-  }
-
+ 
   * {
     box-sizing: border-box;
     max-width: 1280px;
     margin: 0 auto;
-  }
-
-  .logo {
-    padding-top: 2em;
-    padding-left: 40px; 
-    margin: 0;
   }
 
   header {
@@ -54,7 +36,11 @@
    height: 120px;
    background: var(--color-light-xl);
   }
-
+  .logo {
+    padding-top: 2em;
+    padding-left: 40px; 
+    margin: 0;
+  }
   .logo-title {
     font-family: var(--font-family);
     font-weight: 400;
@@ -75,9 +61,35 @@ color: var(--color-dark-3xl);
 text-align: center;
     }
 
-  
+    nav {
+      padding-top: 44px;
+      padding-right: 7px;
+      margin-right: 0;
+      justify-content: flex-end;
+      
+      
+    }
+
+  .nav-list {
+    display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  }
+
+  .nav-item {
+    padding-right: 35px;
+  }
   .nav-link {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--color-dark-l);
+    
+    line-height: 30px;
     text-decoration: none;
+    
     
   }
   
@@ -87,7 +99,13 @@ text-align: center;
   }
 
   .nav-link-active {
-    
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--color-dark-l);
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 3px;
     text-decoration: none;
     pointer-events: none; /*неактивная ссылка*/
   }
