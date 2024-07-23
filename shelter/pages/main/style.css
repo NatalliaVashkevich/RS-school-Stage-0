@@ -251,14 +251,6 @@ background-color: var(--color-light-l);
     
   }
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    width: 270px;
-    height: 435px;
-    margin: 27px 37px;
-    background: var(--color-light-s);
-  }
 
   .pet-name {
     font-family: var(--font-family);

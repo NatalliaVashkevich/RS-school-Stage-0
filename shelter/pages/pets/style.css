@@ -113,7 +113,7 @@ text-align: center;
   main {
     display: flex;
     flex-direction: column;
-    background: var(--color-light-l);
+    background: rgb(197, 197, 235);/*var(--color-light-l);*/
     padding: 40px;
   }
 
@@ -127,7 +127,7 @@ text-align: center;
 color: var(--color-dark-l);
 
 padding-top: 40px;
-padding-bottom: 58px;
+padding-bottom: 59px;
 }
 
 .pets {
@@ -135,16 +135,18 @@ padding-bottom: 58px;
   flex-wrap: wrap;
   justify-content: space-between;
   column-gap: 40px;
-  row-gap: 60px;
+  row-gap: 30px;
  
 }
 
 .card {
   display: flex;
   flex-direction: column;
-    border-radius: 9px 9px 0 0;
+    border-radius: 9px;
 width: 270px;
 row-gap: 30px;
+background: var(--color-light-s);
+padding-bottom: 30px;
 }
 
 .button {
@@ -153,6 +155,7 @@ align-items: center;
 justify-content: flex-start;
 flex-direction: column;
 gap: 10px;
+padding-bottom: 40px;
 
 border: 2px solid var(--color-primary);
 border-radius: 100px;
@@ -178,6 +181,24 @@ letter-spacing: 0.06em;
 text-align: center;
 color: var(--color-dark-l);
 text-align: center;
-/*padding-top: 10px;
-padding-bottom: 10px;*/
 }
+
+.button-paginator-active {
+border-radius: 100px;
+background: var(--color-primary);
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 20px;
+color: var(--color-dark-3xl);
+text-decoration: none;
+
+padding: 14px 21px;
+  width: 52px;
+height: 52px;
+}
+.navigation {
+  display: flex;
+  padding-top: 60px;
+  column-gap: 20px;
+  padding-bottom: 60px;
+  }
