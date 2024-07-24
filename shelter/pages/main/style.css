@@ -33,6 +33,7 @@
 
 * {
     box-sizing: border-box;
+    text-decoration: none;
   }
   .start-screen-background {
     margin: 0;
@@ -41,9 +42,9 @@
 
   }
   .logo {
-    padding-left: 0px;
+    padding-left: 0;
     line-height: 0;
-  }
+    }
 
   .header {
     display: flex;
@@ -240,17 +241,38 @@ background-color: var(--color-light-l);
 
   .slider {
     display: flex;
-    padding: 0 40px;
+    padding: 30px 0;
     justify-content: space-between;
     }
 
-  .button-arrow {
-    border-radius: 100px;
-    border: 2px solid var(--color-primary);
-    margin-top: 220px;
-    
-  }
+.slider::before{
+  content: url(../../assets/icons/button_arrow-left.png);
+  
+    margin: auto 0;
+    position: relative;
+    left: 40px;
+}
 
+.slider::after {
+  content: url(../../assets/icons/button_arrow-right.png);
+  margin: auto 0;
+  position: relative;
+    right: 40px;
+}
+  
+#our-friends a {
+  text-decoration: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 9px;
+width: 270px;
+height: 435px;
+background: var(--color-light-s);
+}
 
   .pet-name {
     font-family: var(--font-family);
@@ -259,7 +281,7 @@ font-size: 20px;
 letter-spacing: 0.06em;
 text-align: center;
 color: var(--color-dark-l);
-padding-top: 12px;
+line-height: 2em;
   }
 
   .button-secondary {
@@ -268,7 +290,7 @@ align-items: center;
 justify-content: flex-start;
 flex-direction: column;
 margin-left: 43px;
-margin-top: 10px;
+margin-top: 0px;
 gap: 10px;
 border: 2px solid var(--color-primary);
 border-radius: 100px;
@@ -292,10 +314,10 @@ flex-direction: column;
 gap: 10px;
 
 border-radius: 100px;
-padding: 15px 35px;
+padding: 15px 30px;
 width: 261px;
 height: 52px;
-margin: 35px auto;
+margin: 30px auto;
 border-color: var(--color-primary);
 border-style: hidden;
 
