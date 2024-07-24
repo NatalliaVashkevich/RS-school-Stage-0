@@ -211,16 +211,19 @@ height: 52px;
 
     .footer-content {
       display: flex;
-      
     }
+
 .contact-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  align-content: space-between;
+width: 302px;
 height: 234px;
-margin: 16px 140px 60px 0;
-
+margin-top: 16px;
+margin-bottom: 60px;
+margin-left: 0;
+margin-right: 138px;
 }
 
 .contact-title {
@@ -231,15 +234,12 @@ line-height: 130%;
 letter-spacing: 0.06em;
 color: var(--color-light-xl);
 margin-left: 0;
-
-
 }
 
 .contact-item {
   display: flex;
   margin-left: 0;
   text-align: left;
-
   }
 
 .contact-link {
@@ -252,6 +252,14 @@ color: var(--color-primary);
 padding-left: 1em;
 }
 
+.contact-icon {
+  vertical-align: center;
+  margin: auto;
+}
+
+.contact-image {
+  margin-right: 0;
+}
 
 footer a {
   text-decoration: none;

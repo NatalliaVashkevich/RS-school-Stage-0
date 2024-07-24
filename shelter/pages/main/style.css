@@ -440,67 +440,67 @@ padding-left: 4px;
 
   footer {
     height: 350px;
-    display: flex;
-    justify-content: space-between;
-    background: var(--start-screen-gradient-background), radial-gradient(549.89% 73.65% at 5.73% 50%, rgb(81, 61, 47) 0%, rgb(26, 26, 28) 100%), url(../../assets/images/footer-gradient-background.png);
-    background: url(../../assets/images/footer-background.png);
-    padding-top: 27px;
-    padding-left: 40px;
-    padding-right: 40px;
-          
-  }
-
-  .contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+        background: url(../../assets/images/footer-background.png);
+    padding: 40px 40px 0 40px;
     }
-    .contacts-location {
+
+    .footer-content {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      margin-left: 140px;
-      }
-  .contact-title {
-    font-family: var(--font-family);
+      margin-right: 0;
+      
+    }
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+width: 302px;
+height: 234px;
+margin-top: 16px;
+margin-bottom: 60px;
+margin-left: 0;
+margin-right: 138px;
+}
+
+.contact-title {
+  font-family: var(--font-family);
 font-weight: 400;
 font-size: 35px;
 line-height: 130%;
 letter-spacing: 0.06em;
 color: var(--color-light-xl);
-width: 300px;
+margin-left: 0;
+}
 
+.contact-item {
+  display: flex;
+  margin-left: 0;
+  text-align: left;
   }
 
-  .contact-item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 70px;
-    margin-top: -5px;
-    padding-left: 5px;
-    
-  }
-
-  .contact-icon {
-    fill: var(--color-primary);
-    width: auto;
-    align-items: flex-start;
-     margin-left: -5px;
-     margin-top: -2px;     
-  }
-
-  .contact-link {
-font-family: var(--font-family);
+.contact-link {
+  font-family: var(--font-family);
 font-weight: 400;
 font-size: 20px;
 line-height: 115%;
 letter-spacing: 0.06em;
 color: var(--color-primary);
-padding-left: 15px;
-  }
+margin-left: 20px;
+vertical-align: center;
+}
 
-  .contact-image {
-padding-top: 12px;
-padding-left: 100px;
-  }
+.contact-icon {
+
+  margin-left: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.contact-image {
+  margin-left: 20px;
+}
+
+footer a {
+  text-decoration: none;
+}
