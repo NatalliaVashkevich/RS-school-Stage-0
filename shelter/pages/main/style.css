@@ -65,6 +65,15 @@ align-items: flex-start;
     padding-left: 40px;
     padding-top: 1em;
   }
+
+  :hover {
+    transition: 0.5s;  /*плавное изменение цвета*/
+  }
+
+  .logo-title:hover {
+    color: var(--color-light-xl);
+  }
+
   .logo-subtitle {
     font-family: var(--second-family);
     font-weight: 400;
@@ -90,11 +99,7 @@ align-items: flex-start;
 	align-items: center;
   }
 
-  .nav-item {
-	
-  }
-
-  .nav-link {
+    .nav-link {
     text-decoration: none;
     font-family: var(--second-family);
     font-weight: 400;
@@ -104,8 +109,7 @@ align-items: flex-start;
   }
 
   .nav-link:hover {
-    color: var(--color-primary);
-    transition: color 0.5s; /*плавное изменение цвета*/
+    color: var(--color-light-s);
   }
 
   .nav-link-active {
@@ -171,8 +175,11 @@ align-items: flex-start;
     letter-spacing: 0.06em;
     color: var(--color-dark-3xl);
     }
+    .button-primery:hover {
+      background: var(--color-primary-light);
+    }
 
-  .start-screen-puppy {
+    .start-screen-puppy {
     justify-content: flex-end;
     align-content: flex-end;
     padding-left: 30px;
@@ -250,7 +257,6 @@ background-color: var(--color-light-l);
 .slider-wrapper {
   display: flex;
   justify-content: space-between;
-  
   margin: 0 35px;
 }
 
@@ -266,6 +272,12 @@ background-color: var(--color-light-l);
   text-decoration: none;
 }
 
+.button-paginator:hover {
+  cursor: pointer;
+  border-radius: 100px;
+  background-color: var(--color-primary-light);
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -274,6 +286,14 @@ background-color: var(--color-light-l);
 width: 270px;
 height: 435px;
 background: var(--color-light-s);
+}
+
+.card:hover {
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.button-secondary:hover {
+  background: var(--color-primary-light);
 }
 
   .pet-name {
@@ -331,6 +351,10 @@ font-size: 17px;
 line-height: 130%;
 letter-spacing: 0.06em;
 color: var(--color-dark-3xl);
+  }
+
+  .pets-button-primery:hover {
+    background: var(--color-primary-light);
   }
 
   #help {
@@ -408,7 +432,10 @@ display: flex;
     padding-left: 1.9em;
     width: 380px;
     padding-right: 20px;
-    }  
+    } 
+    .card-number:hover {
+      transform: scale(1.03);
+    } 
     
   .donation-heading{
     padding-right: 30px;
@@ -512,6 +539,10 @@ letter-spacing: 0.06em;
 color: var(--color-primary);
 margin-left: 20px;
 vertical-align: center;
+}
+
+.contact-link:hover {
+  color: var(--color-light-s);
 }
 
 .contact-icon {

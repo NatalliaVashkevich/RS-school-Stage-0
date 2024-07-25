@@ -28,6 +28,7 @@
     box-sizing: border-box;
     max-width: 1280px;
     margin: 0 auto;
+    text-decoration: none;
   }
 
   header {
@@ -66,8 +67,6 @@ text-align: center;
       padding-right: 7px;
       margin-right: 0;
       justify-content: flex-end;
-      
-      
     }
 
   .nav-list {
@@ -89,8 +88,6 @@ text-align: center;
     
     line-height: 30px;
     text-decoration: none;
-    
-    
   }
   
   .nav-link:hover {
@@ -196,6 +193,10 @@ padding: 14px 21px;
   width: 52px;
 height: 52px;
 }
+
+.button-disabled {
+  pointer-events: none;
+}
 .navigation {
   display: flex;
   padding-top: 60px;
@@ -265,3 +266,35 @@ footer a {
   text-decoration: none;
 }
 
+:hover {
+  transition: 0.5s;  /*плавное изменение цвета*/
+}
+
+.logo-title:hover {
+  color: var(--color-primary);
+}
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.button-paginator:hover {
+  cursor: pointer;
+  border-radius: 100px;
+  background-color: var(--color-primary-light);
+}
+.button-paginator-active:hover {
+  cursor: pointer;
+  border-radius: 100px;
+  background-color: var(--color-primary-light);
+}
+
+.button:hover {
+  background: var(--color-primary-light);
+}
+.card:hover {
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.contact-link:hover {
+  color: var(--color-light-s);
+}
