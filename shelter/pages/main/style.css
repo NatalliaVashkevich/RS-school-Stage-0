@@ -33,6 +33,7 @@
 
 * {
     box-sizing: border-box;
+    text-decoration: none;
   }
   .start-screen-background {
     margin: 0;
@@ -41,9 +42,9 @@
 
   }
   .logo {
-    padding-left: 0px;
+    padding-left: 0;
     line-height: 0;
-  }
+    }
 
   .header {
     display: flex;
@@ -64,6 +65,15 @@ align-items: flex-start;
     padding-left: 40px;
     padding-top: 1em;
   }
+
+  :hover {
+    transition: 0.3s;  /*плавное изменение цвета*/
+  }
+
+  .logo>div:hover {
+    color: var(--color-light-xl);
+  }
+
   .logo-subtitle {
     font-family: var(--second-family);
     font-weight: 400;
@@ -89,15 +99,7 @@ align-items: flex-start;
 	align-items: center;
   }
 
-  .nav-item {
-	font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 160%;
-    color: var(--color-dark-s);
-  }
-
-  .nav-link {
+    .nav-link {
     text-decoration: none;
     font-family: var(--second-family);
     font-weight: 400;
@@ -107,8 +109,7 @@ align-items: flex-start;
   }
 
   .nav-link:hover {
-    color: var(--color-primary);
-    transition: color 0.5s; /*плавное изменение цвета*/
+    color: var(--color-light-s);
   }
 
   .nav-link-active {
@@ -127,6 +128,8 @@ align-items: flex-start;
     display: flex;
     justify-content: flex-start;
     height: 808px;
+    position: relative;
+    top: -808px;
     
   }
 .start-screen {
@@ -174,8 +177,11 @@ align-items: flex-start;
     letter-spacing: 0.06em;
     color: var(--color-dark-3xl);
     }
+    .button-primery:hover {
+      background: var(--color-primary-light);
+    }
 
-  .start-screen-puppy {
+    .start-screen-puppy {
     justify-content: flex-end;
     align-content: flex-end;
     padding-left: 30px;
@@ -189,6 +195,7 @@ align-items: flex-start;
     align-content: flex-start;
     height: 588px;
     background: var(--color-light-xl);
+    margin-top: -808px;
   }
 
   .about-pets-img {
@@ -244,25 +251,55 @@ background-color: var(--color-light-l);
 
   .slider {
     display: flex;
-    padding: 0 40px;
     justify-content: space-between;
+    column-gap: 90px;
+    margin: 0;
+    padding-top: 30px;
     }
 
-  .button-arrow {
-    border-radius: 100px;
-    border: 2px solid var(--color-primary);
-    margin-top: 220px;
-    
+.slider-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 35px;
+}
+
+.slider-wrapper button {
+  border-style: none;
+  background-color: var(--color-light-l);
+  margin-top: 220px;
   }
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    width: 270px;
-    height: 435px;
-    margin: 27px 37px;
-    background: var(--color-light-s);
+  
+  
+#our-friends a {
+  text-decoration: none;
+}
+
+.button-paginator:hover {
+  cursor: pointer;
+  border-radius: 100px;
+ 
+  background-color: var(--color-primary-light);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 9px;
+width: 270px;
+height: 435px;
+background: var(--color-light-s);
+}
+
+.card:hover {
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  .button-secondary {
+  background: var(--color-primary-light);
+  transition: 0.3s;
   }
+}
+
 
   .pet-name {
     font-family: var(--font-family);
@@ -271,7 +308,7 @@ font-size: 20px;
 letter-spacing: 0.06em;
 text-align: center;
 color: var(--color-dark-l);
-padding-top: 12px;
+line-height: 2em;
   }
 
   .button-secondary {
@@ -280,7 +317,7 @@ align-items: center;
 justify-content: flex-start;
 flex-direction: column;
 margin-left: 43px;
-margin-top: 10px;
+margin-top: 0px;
 gap: 10px;
 border: 2px solid var(--color-primary);
 border-radius: 100px;
@@ -304,10 +341,10 @@ flex-direction: column;
 gap: 10px;
 
 border-radius: 100px;
-padding: 15px 35px;
+padding: 15px 30px;
 width: 261px;
 height: 52px;
-margin: 35px auto;
+margin: 60px auto;
 border-color: var(--color-primary);
 border-style: hidden;
 
@@ -319,6 +356,10 @@ font-size: 17px;
 line-height: 130%;
 letter-spacing: 0.06em;
 color: var(--color-dark-3xl);
+  }
+
+  .pets-button-primery:hover {
+    background: var(--color-primary-light);
   }
 
   #help {
@@ -396,7 +437,10 @@ display: flex;
     padding-left: 1.9em;
     width: 380px;
     padding-right: 20px;
-    }  
+    } 
+    .card-number:hover {
+      transform: scale(1.03);
+    } 
     
   .donation-heading{
     padding-right: 30px;
@@ -452,67 +496,71 @@ padding-left: 4px;
 
   footer {
     height: 350px;
-    display: flex;
-    justify-content: space-between;
-    background: var(--start-screen-gradient-background), radial-gradient(549.89% 73.65% at 5.73% 50%, rgb(81, 61, 47) 0%, rgb(26, 26, 28) 100%), url(../../assets/images/footer-gradient-background.png);
-    background: url(../../assets/images/footer-background.png);
-    padding-top: 27px;
-    padding-left: 40px;
-    padding-right: 40px;
-          
-  }
-
-  .contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+        background: url(../../assets/images/footer-background.png);
+    padding: 40px 40px 0 40px;
     }
-    .contacts-location {
+
+    .footer-content {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      margin-left: 140px;
-      }
-  .contact-title {
-    font-family: var(--font-family);
+      margin-right: 0;
+      
+    }
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+width: 302px;
+height: 234px;
+margin-top: 16px;
+margin-bottom: 60px;
+margin-left: 0;
+margin-right: 138px;
+}
+
+.contact-title {
+  font-family: var(--font-family);
 font-weight: 400;
 font-size: 35px;
 line-height: 130%;
 letter-spacing: 0.06em;
 color: var(--color-light-xl);
-width: 300px;
+margin-left: 0;
+}
 
+.contact-item {
+  display: flex;
+  margin-left: 0;
+  text-align: left;
   }
 
-  .contact-item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 70px;
-    margin-top: -5px;
-    padding-left: 5px;
-    
-  }
-
-  .contact-icon {
-    fill: var(--color-primary);
-    width: auto;
-    align-items: flex-start;
-     margin-left: -5px;
-     margin-top: -2px;     
-  }
-
-  .contact-link {
-font-family: var(--font-family);
+.contact-link {
+  font-family: var(--font-family);
 font-weight: 400;
 font-size: 20px;
 line-height: 115%;
 letter-spacing: 0.06em;
 color: var(--color-primary);
-padding-left: 15px;
-  }
+margin-left: 20px;
+vertical-align: center;
+}
 
-  .contact-image {
-padding-top: 12px;
-padding-left: 100px;
-  }
+.contact-link:hover {
+  color: var(--color-light-s);
+}
+
+.contact-icon {
+
+  margin-left: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.contact-image {
+  margin-left: 20px;
+}
+
+footer a {
+  text-decoration: none;
+}
