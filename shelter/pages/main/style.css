@@ -28,18 +28,16 @@
     min-height: 100vh;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0;
-  }
+   }
 
 * {
     box-sizing: border-box;
     text-decoration: none;
   }
-  .start-screen-background {
-    margin: 0;
+ .start-screen-background {
+    /*margin: 0;*/
     height: 908px;
     background-image: url(../../assets/images/start-screen-gradient-background.jpg);
-
   }
   .logo {
     padding-left: 0;
@@ -127,9 +125,9 @@ align-items: flex-start;
   .not-only {
     display: flex;
     justify-content: flex-start;
-    height: 808px;
+    /*height: 808px;*/
     position: relative;
-    top: -808px;
+    bottom: 133vh;
     
   }
 .start-screen {
@@ -185,7 +183,7 @@ align-items: flex-start;
     justify-content: flex-end;
     align-content: flex-end;
     padding-left: 30px;
-    margin-bottom: -5px;
+    margin-top: 6%;
   }
 
 
@@ -195,7 +193,7 @@ align-items: flex-start;
     align-content: flex-start;
     height: 588px;
     background: var(--color-light-xl);
-    margin-top: -808px;
+    margin-top: -133vh;
   }
 
   .about-pets-img {
@@ -573,4 +571,25 @@ footer a {
   .nav-list {
     margin-right: 3.9vw;
   }
-}
+  .not-only {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 19%;
+  }
+
+  .start-screen {
+    width: 100%;
+    padding: 13% 20% 0 20%;
+  }
+  .button-primery {
+    margin-left: 27%;
+  }
+  .start-screen-puppy {
+    padding-top: 7%;
+    padding-left: 10%;
+  }
+  
+  .start-screen-background {
+height: 100vh;
+  }
+ 
