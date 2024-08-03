@@ -37,7 +37,7 @@
  .start-screen-background {
     /*margin: 0;*/
     height: 908px;
-    background-image: url(../../assets/images/start-screen-gradient-background.jpg);
+    background-image: var(--start-screen-gradient-background);
   }
   .logo {
     padding-left: 0;
@@ -563,8 +563,12 @@ footer a {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  
+@media (max-width: 769px) {
+  .start-screen-background {
+    /*margin: 0;*/
+    height: 114vh;
+    background: var(--start-screen-gradient-background);
+    }
   .logo {
     margin-left: -1.1vw;
   }
@@ -574,8 +578,9 @@ footer a {
   .not-only {
     flex-direction: column;
     justify-content: center;
-    padding-top: 19%;
-  }
+    position: relative;
+    bottom: 133vh;
+    }
 
   .start-screen {
     width: 100%;
@@ -585,11 +590,64 @@ footer a {
     margin-left: 27%;
   }
   .start-screen-puppy {
-    padding-top: 7%;
-    padding-left: 10%;
+    margin-top: 10vh;
+    margin-left: 18vw;
+       
   }
-  
-  .start-screen-background {
-height: 100vh;
+  .start-screen-puppy-img {
+    max-width: 74vw;
+   }
+
+   #about {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: flex-start;
+    justify-content: flex-start;
+
+    margin-top: -97.5vh;
+      
+  }
+  .about-pets-content { 
+    width: 100%;
+    padding-left: 22vw;
+    padding-right: 22vw;
+    margin-bottom: 7vh;
+  }
+
+  .about-pets-img {
+    padding-top: 0;
+    padding-left: 30.5vw;
   }
  
+  /*#our-friends {
+    display: flex;
+    flex-direction: column;
+    height: 877px;
+    background-color: var(--color-light-l);
+      }
+    */
+      .our-friends-heading {
+        text-align: center;
+        padding: 0;
+        padding-top: 14vh;
+      }
+    
+      .slider {
+       
+        column-gap: 4vw;
+        margin-left: 1vw;
+        
+        padding-top: 30px;
+        }
+
+      
+    
+    .slider-wrapper {
+      margin-left: 2.8vw;
+    }
+    
+    .slider-wrapper button {
+      border-style: none;
+      background-color: var(--color-light-l);
+      margin-top: 220px;
+      }
