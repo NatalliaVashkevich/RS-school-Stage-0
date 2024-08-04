@@ -34,11 +34,7 @@
     box-sizing: border-box;
     text-decoration: none;
   }
- .start-screen-background {
-    /*margin: 0;*/
-    height: 908px;
-    background-image: var(--start-screen-gradient-background);
-  }
+ 
   .logo {
     padding-left: 0;
     line-height: 0;
@@ -50,6 +46,7 @@
 margin: 0;
 justify-content: space-between;
 align-items: flex-start; 
+background: var(--start-screen-gradient-background);
   }
 
   .logo-title {
@@ -125,9 +122,7 @@ align-items: flex-start;
   .not-only {
     display: flex;
     justify-content: flex-start;
-    /*height: 808px;*/
-    position: relative;
-    bottom: 133vh;
+    background-color: var(--start-screen-gradient-background);
     
   }
 .start-screen {
@@ -183,7 +178,7 @@ align-items: flex-start;
     justify-content: flex-end;
     align-content: flex-end;
     padding-left: 30px;
-    margin-top: 6%;
+    padding-top: 5.6vw;
   }
 
 
@@ -193,8 +188,7 @@ align-items: flex-start;
     align-content: flex-start;
     height: 588px;
     background: var(--color-light-xl);
-    margin-top: -133vh;
-  }
+    }
 
   .about-pets-img {
     padding-top: 80px;
@@ -217,6 +211,7 @@ font-size: 35px;
 line-height: 130%;
 letter-spacing: 0.06em;
 color: var(--color-dark-l);
+margin-bottom: 2vw;
   }
 
   .about-pets-heading {
@@ -563,35 +558,40 @@ footer a {
   text-decoration: none;
 }
 
-@media (max-width: 769px) {
-  .start-screen-background {
-    /*margin: 0;*/
-    height: 114vh;
-    background: var(--start-screen-gradient-background);
-    }
-  .logo {
-    margin-left: -1.1vw;
+@media (max-width: 768px) {
+  .header {
+    max-width: 768px;
   }
+  .logo-title {
+    padding-left: 4vw;
+  }
+
+  .logo-subtitle {
+    padding-left: 4vw;
+  }
+  
   .nav-list {
-    margin-right: 3.9vw;
+    margin-right: 4vw;
   }
   .not-only {
     flex-direction: column;
-    justify-content: center;
-    position: relative;
-    bottom: 133vh;
+    background: var(--start-screen-gradient-background);
     }
 
   .start-screen {
     width: 100%;
-    padding: 13% 20% 0 20%;
-  }
+    padding-left: 20vw;
+    padding-right: 20vw;
+   }
+   h1 {
+    padding-top: 2vw;
+   }
   .button-primery {
     margin-left: 27%;
   }
   .start-screen-puppy {
-    margin-top: 10vh;
-    margin-left: 18vw;
+    padding-top: 12vw;
+    padding-left: 22vw;
        
   }
   .start-screen-puppy-img {
@@ -601,53 +601,69 @@ footer a {
    #about {
     display: flex;
     flex-direction: column-reverse;
-    align-content: flex-start;
-    justify-content: flex-start;
-
-    margin-top: -97.5vh;
+    height: 1048px;
       
   }
   .about-pets-content { 
     width: 100%;
     padding-left: 22vw;
     padding-right: 22vw;
-    margin-bottom: 7vh;
-  }
+    padding-top: 7vw;
+    }
+    h2 {
+      margin-bottom: 0;
+    }
+    .about-pets-text {
+      padding-top: 0.5vw;
+    }
 
   .about-pets-img {
-    padding-top: 0;
+    padding-bottom: 12vw;
     padding-left: 30.5vw;
+    padding-top: 0;
   }
  
-  /*#our-friends {
-    display: flex;
-    flex-direction: column;
-    height: 877px;
-    background-color: var(--color-light-l);
-      }
-    */
       .our-friends-heading {
         text-align: center;
         padding: 0;
-        padding-top: 14vh;
+        padding-top: 7vw;
       }
     
       .slider {
-       
-        column-gap: 4vw;
-        margin-left: 1vw;
-        
-        padding-top: 30px;
+        column-gap: 5vw;
+        padding-top: 7.5vw;
         }
 
-      
-    
-    .slider-wrapper {
+      .slider-wrapper {
       margin-left: 2.8vw;
+      margin-right: 2.8vw;
     }
     
-    .slider-wrapper button {
-      border-style: none;
-      background-color: var(--color-light-l);
-      margin-top: 220px;
+      .third-card {
+        display: none;
       }
+      .slider-wrapper button {
+        margin-top: 32.5vw;
+        }
+#help {
+  height: 101vw;
+}
+        .help-list {
+          padding-top: 8vw;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          column-gap: 7.6vw;
+          }
+
+            .help-item {
+              width: 22vw;
+            }
+
+            .donation {
+              height: 102vw;
+              flex-direction: column-reverse;
+              margin: 0;
+              padding: 0;
+            }
+
+           
