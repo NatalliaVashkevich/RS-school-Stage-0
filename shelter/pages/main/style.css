@@ -489,7 +489,7 @@ padding-left: 4px;
 
   footer {
     height: 350px;
-        background: url(../../assets/images/footer-background.png);
+        background-color: var(--start-screen-gradient-background) ;
     padding: 40px 40px 0 40px;
     }
 
@@ -662,8 +662,56 @@ footer a {
             .donation {
               height: 102vw;
               flex-direction: column-reverse;
+              justify-content: flex-end;
               margin: 0;
               padding: 0;
+              width: 100%;
             }
 
-           
+            .credit-card {
+              width: 100%;
+              padding: 5vw 25vw 0 25vw;
+              margin: 0;
+            }
+            .donation-heading {
+              margin-top: 0;
+             padding-top: 6vw;
+              margin-bottom: 4vw;
+              padding-right: 10vw;
+            }
+            .donation-image {
+              width: 505px;
+              height: 261px;
+              margin-left: 17vw;
+              margin-top: 6vw;
+             }
+
+             footer { 
+             height: 83.2vw;
+              background-color: var(--start-screen-gradient-background) ;
+              padding: 30px 30px 0 30px;
+              }
+          
+              .footer-content {
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: 0;
+              }
+              .contact-container {
+               /* display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-content: space-between;*/
+              width: 302px;
+              height: 234px;
+              margin-top: 1vw;
+              margin-bottom: 0;
+              margin-left: 4vw;
+              margin-right: 0.5vw;
+              }
+
+              .contact-image {
+                margin-left: 0;
+                padding-left: 27vw;
+                padding-top: 8vw;
+              }
