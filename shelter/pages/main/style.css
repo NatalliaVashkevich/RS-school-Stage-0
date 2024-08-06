@@ -39,7 +39,9 @@
     padding-left: 0;
     line-height: 0;
     }
-
+.burger {
+  display: none;
+}
   .header {
     display: flex;
     height: 100px;
@@ -559,9 +561,7 @@ footer a {
 }
 
 @media (max-width: 768px) {
-  .header {
-    max-width: 768px;
-  }
+  
   .logo-title {
     padding-left: 4vw;
   }
@@ -711,3 +711,195 @@ footer a {
                 padding-left: 27vw;
                 padding-top: 8vw;
               }
+            }
+            @media (max-width: 320px) {
+              
+              .logo-title {
+                padding-left: 6.5vw;
+                padding-right: 0;
+              }
+            
+              .logo-subtitle {
+                padding-left: 6.5vw;
+              }
+              nav {
+                width: 30%;
+              }
+              .nav-list {
+                flex-direction: column;
+                transform: translateX(100%);
+                }
+                .burger {
+                  display: block;
+                  border: 1px solid var(--color-primary);
+                  background-color: var(--color-primary);
+                  width: 30px;
+                  height: 0px;
+                  position: absolute;
+                  top: 58px;
+                  right: 20px;
+                }
+
+.burger::after {
+  content: '';
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+  width: 26px;
+  height: 0px;
+  display: block;
+  position: relative;
+  top: 4px;
+  right: 7px;
+}
+
+.burger::before {
+  content: '';
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+  width: 26px;
+  height: 0px;
+  display: block;
+  position: relative;
+  top: -12px;
+  right: 7px;
+}
+                
+              /*
+              .not-only {
+                flex-direction: column;
+                background: var(--start-screen-gradient-background);
+                }
+            
+              .start-screen {
+                width: 100%;
+                padding-left: 20vw;
+                padding-right: 20vw;
+               }
+               h1 {
+                padding-top: 2vw;
+               }
+              .button-primery {
+                margin-left: 27%;
+              }
+              .start-screen-puppy {
+                padding-top: 12vw;
+                padding-left: 22vw;
+                   
+              }
+              .start-screen-puppy-img {
+                max-width: 74vw;
+               }
+            
+               #about {
+                display: flex;
+                flex-direction: column-reverse;
+                height: 1048px;
+                  
+              }
+              .about-pets-content { 
+                width: 100%;
+                padding-left: 22vw;
+                padding-right: 22vw;
+                padding-top: 7vw;
+                }
+                h2 {
+                  margin-bottom: 0;
+                }
+                .about-pets-text {
+                  padding-top: 0.5vw;
+                }
+            
+              .about-pets-img {
+                padding-bottom: 12vw;
+                padding-left: 30.5vw;
+                padding-top: 0;
+              }
+             
+                  .our-friends-heading {
+                    text-align: center;
+                    padding: 0;
+                    padding-top: 7vw;
+                  }
+                
+                  .slider {
+                    column-gap: 5vw;
+                    padding-top: 7.5vw;
+                    }
+            
+                  .slider-wrapper {
+                  margin-left: 2.8vw;
+                  margin-right: 2.8vw;
+                }
+                
+                  .third-card {
+                    display: none;
+                  }
+                  .slider-wrapper button {
+                    margin-top: 32.5vw;
+                    }
+            #help {
+              height: 101vw;
+            }
+                    .help-list {
+                      padding-top: 8vw;
+                      padding-left: 4vw;
+                      padding-right: 4vw;
+                      column-gap: 7.6vw;
+                      }
+            
+                        .help-item {
+                          width: 22vw;
+                        }
+            
+                        .donation {
+                          height: 102vw;
+                          flex-direction: column-reverse;
+                          justify-content: flex-end;
+                          margin: 0;
+                          padding: 0;
+                          width: 100%;
+                        }
+            
+                        .credit-card {
+                          width: 100%;
+                          padding: 5vw 25vw 0 25vw;
+                          margin: 0;
+                        }
+                        .donation-heading {
+                          margin-top: 0;
+                         padding-top: 6vw;
+                          margin-bottom: 4vw;
+                          padding-right: 10vw;
+                        }
+                        .donation-image {
+                          width: 505px;
+                          height: 261px;
+                          margin-left: 17vw;
+                          margin-top: 6vw;
+                         }
+            
+                         footer { 
+                         height: 83.2vw;
+                          background-color: var(--start-screen-gradient-background) ;
+                          padding: 30px 30px 0 30px;
+                          }
+                      
+                          .footer-content {
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin-right: 0;
+                          }
+                          .contact-container {
+                          width: 302px;
+                          height: 234px;
+                          margin-top: 1vw;
+                          margin-bottom: 0;
+                          margin-left: 4vw;
+                          margin-right: 0.5vw;
+                          }
+            
+                          .contact-image {
+                            margin-left: 0;
+                            padding-left: 27vw;
+                            padding-top: 8vw;
+                          }

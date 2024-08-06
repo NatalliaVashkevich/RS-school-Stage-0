@@ -297,7 +297,7 @@ footer a {
   color: var(--color-light-s);
 }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
  
   .logo {
     padding-top: 4vw;
