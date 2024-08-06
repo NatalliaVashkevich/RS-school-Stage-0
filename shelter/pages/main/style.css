@@ -639,7 +639,7 @@ footer a {
       margin-right: 2.8vw;
     }
     
-      .third-card {
+      .card:last-child {
         display: none;
       }
       .slider-wrapper button {
@@ -712,7 +712,7 @@ footer a {
                 padding-top: 8vw;
               }
             }
-            @media (max-width: 320px) {
+            @media (max-width: 480px) {
               
               .logo-title {
                 padding-left: 6.5vw;
@@ -727,10 +727,12 @@ footer a {
               }
               .nav-list {
                 flex-direction: column;
-                transform: translateX(100%);
+                /*transform: translateX(100%);*/
+                display: none;
                 }
                 .burger {
                   display: block;
+                  content: '';
                   border: 1px solid var(--color-primary);
                   background-color: var(--color-primary);
                   width: 30px;
@@ -763,56 +765,65 @@ footer a {
   top: -12px;
   right: 7px;
 }
-                
-              /*
-              .not-only {
-                flex-direction: column;
-                background: var(--start-screen-gradient-background);
-                }
-            
-              .start-screen {
+
+               .start-screen {
                 width: 100%;
-                padding-left: 20vw;
-                padding-right: 20vw;
+                padding-left: 2vw;
+                padding-right: 3vw;
+                text-align: center;
                }
+                
                h1 {
-                padding-top: 2vw;
+                padding-top: 9.5vw;
+                font-size: 25px;
+                letter-spacing: 0.06em;
+                padding-bottom: 5vw;
                }
+               
               .button-primery {
-                margin-left: 27%;
+                margin-left: 16vw;
               }
+              
               .start-screen-puppy {
-                padding-top: 12vw;
-                padding-left: 22vw;
+                padding-top: 32vw;
+                padding-left: 16.5vw;
+                min-width: 260px;
                    
               }
               .start-screen-puppy-img {
-                max-width: 74vw;
+                max-width: 81vw;
                }
             
                #about {
-                display: flex;
-                flex-direction: column-reverse;
-                height: 1048px;
-                  
+                
+               height: 304vw;
               }
               .about-pets-content { 
                 width: 100%;
-                padding-left: 22vw;
-                padding-right: 22vw;
+                padding-left: 8vw;
+                padding-right: 8vw;
                 padding-top: 7vw;
+                
                 }
                 h2 {
+                  font-size: 25px;
                   margin-bottom: 0;
+                  text-align: center;
+                  padding-left: 6vw;
                 }
                 .about-pets-text {
                   padding-top: 0.5vw;
+                  text-align: justify;
                 }
             
               .about-pets-img {
                 padding-bottom: 12vw;
-                padding-left: 30.5vw;
-                padding-top: 0;
+                padding-left: 9vw;
+                padding-top: 0vw;
+               
+              }
+              .about-pets-img img {
+                max-width: 81vw;
               }
              
                   .our-friends-heading {
@@ -820,7 +831,7 @@ footer a {
                     padding: 0;
                     padding-top: 7vw;
                   }
-                
+                /*
                   .slider {
                     column-gap: 5vw;
                     padding-top: 7.5vw;
@@ -831,11 +842,11 @@ footer a {
                   margin-right: 2.8vw;
                 }
                 
-                  .third-card {
-                    display: none;
-                  }
+                .card:nth-child(2) {
+                  display: none;
+                }
                   .slider-wrapper button {
-                    margin-top: 32.5vw;
+                    margin-top: 110vw;
                     }
             #help {
               height: 101vw;
