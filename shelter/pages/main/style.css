@@ -263,8 +263,6 @@ background-color: var(--color-light-l);
   background-color: var(--color-light-l);
   margin-top: 220px;
   }
-
-  
   
 #our-friends a {
   text-decoration: none;
@@ -273,8 +271,10 @@ background-color: var(--color-light-l);
 .button-paginator:hover {
   cursor: pointer;
   border-radius: 100px;
- 
   background-color: var(--color-primary-light);
+}
+.two-paginators {
+  display: none;
 }
 
 .card {
@@ -560,7 +560,7 @@ footer a {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   
   .logo-title {
     padding-left: 4vw;
@@ -712,7 +712,7 @@ footer a {
                 padding-top: 8vw;
               }
             }
-            @media (max-width: 480px) {
+            @media (width < 768px) {
               
               .logo-title {
                 padding-left: 6.5vw;
@@ -831,23 +831,33 @@ footer a {
                     padding: 0;
                     padding-top: 7vw;
                   }
-                /*
+                
                   .slider {
-                    column-gap: 5vw;
-                    padding-top: 7.5vw;
+                    padding-left: 5vw;
+                    padding-top: 12vw;
                     }
             
-                  .slider-wrapper {
-                  margin-left: 2.8vw;
-                  margin-right: 2.8vw;
-                }
-                
+                                 
                 .card:nth-child(2) {
                   display: none;
                 }
-                  .slider-wrapper button {
-                    margin-top: 110vw;
-                    }
+                  .paginator {
+                    display: none;
+                  }
+                .two-paginators {
+                  display: flex;
+                  justify-content: space-evenly;
+                  padding-top: 6vw;
+                                  
+                }
+                .button-paginator {
+                  border-style: none;
+                }
+                .pets-button-primery {
+                  margin-top: 12vw;
+                }
+
+                /*    
             #help {
               height: 101vw;
             }
@@ -913,4 +923,4 @@ footer a {
                             margin-left: 0;
                             padding-left: 27vw;
                             padding-top: 8vw;
-                          }
+                          }*/
