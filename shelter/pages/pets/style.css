@@ -393,7 +393,71 @@ position: relative;
 top: -12px;
 right: 7px;
 }
+main {
+padding: 42px 10px 37px 10px;
+}
 h1 {
   font-size: 25px;
-  padding-top: 8vw;
+  padding-top: 0;
+  padding-bottom: 13.5vw;
+}
+.pets {
+  padding: 0;
+ }
+
+ 
+.card:nth-child(4) {
+display: none;
+}
+.card:nth-child(5) {
+  display: none;
+  }
+  .card:nth-child(6) {
+    display: none;
+    }
+
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+   padding-top: 43px;
+   padding-bottom: 0;
+    }
+    footer { 
+      padding: 30px 10px 0 10px;
+      }
+  
+      .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        row-gap: 38px;
+      }
+      .contact-title {
+        font-size: 25px;
+        text-align: center;
+        padding: 0 20px;
+      }
+      
+      .contact-container {
+      margin: 0;
+      height: 66vw;
+      }
+      .contact-container:nth-child(2) {
+        height: 70vw;
+      }
+      .contact-item {
+        margin: 0 auto;
+      }
+      .last-item {
+        margin-left: 0;
+        margin-top: 3vw;
+      }
+      .contact-image {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 260px;
+      }
+  
 }
