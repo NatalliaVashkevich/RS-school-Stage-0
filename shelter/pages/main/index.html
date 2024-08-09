@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../../assets/icons/icons8-кошка-16.png">
     <title>Cozy House</title>
+    <script src="./index.js"></script>
 </head>
 <body>
-<div class="start-screen-background">
     <header class="header">
-        <a href="" class="logo">
+        <a href="#" class="logo">
             <div class="logo-title">Cozy House</div>
             <div class="logo-subtitle">Shelter for pets in Boston</div>
         </a>
         <nav>
+            <button class="burger"></button>
             <ul class="nav-list">
                 <li class="nav-item"><a href="#about" class="nav-link-active">About the shelter</a></li>
                 <li class="nav-item"><a href="../pets/index.html" class="nav-link">Our pets</a></li>
@@ -23,19 +24,19 @@
             </ul>
         </nav>       
     </header>
-    </div>
+    
 
     <main>
         <section class="not-only">
         <div class="start-screen">
-            <h1>Not only people need a house</h1>
+            <h1>Not only people<br>need a house</h1>
             <p class="start-screen-subheading">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
             
                 <a href="#our-friends" class="button-primery">Make a friend</a>
             
         </div>
         <div class="start-screen-puppy">
-            <img src="../../assets/images/start-screen-puppy.png" alt="puppy">
+            <img src="../../assets/images/start-screen-puppy.png" class="start-screen-puppy-img" alt="puppy">
         </div>
     </section>
 
@@ -55,7 +56,7 @@
 <h2 class="our-friends-heading">Our friends who<br>are looking for a house</h2>
 <div class="slider-wrapper">
 
-<form>
+<form class="paginator">
     <button class="button-paginator"><img src="../../assets/icons/button_arrow-left.png" alt="arrow-left"></button>
 </form>
 
@@ -87,10 +88,14 @@
 
 </div>
 
-<form>
+<form class="paginator">
     <button class="button-paginator"><img src="../../assets/icons/button_arrow-right.png" alt="arrow-right"></button>
 </form>
 
+</div>
+<div class="two-paginators">
+    <button class="button-paginator"><img src="../../assets/icons/button_arrow-left.png" alt="arrow-left"></button>
+    <button class="button-paginator"><img src="../../assets/icons/button_arrow-right.png" alt="arrow-right"></button>
 </div>
 
     <a href="../pets/index.html" class="pets-button-primery">Get to know the rest</a>
@@ -145,7 +150,7 @@
     <img class="donation-image" src="../../assets/images/donation-dog.png" alt="lying puppy">
    
     <div class="credit-card">
-      <h2 class="donation-heading">You can also make a donation</h2>
+      <h2 class="donation-heading">You can also<br>make a donation</h2>
       <h3 class="donate-subheading">Name of the bank / Type of bank account</h3>
       
       <div class="credit-card-content">
@@ -176,14 +181,14 @@
     
         <div class="contact-container">
     
-            <div class="contact-title">We are waiting<br>for your visit</div>
+            <div class="contact-title">We are waiting for your visit</div>
             
             <div class="contact-item">
                 <img class="contact-icon" src="../../assets/icons/pin.png" alt="icon">
                 <a href="https://maps.app.goo.gl/PZWzZdS4TtsAeF1c7" class="contact-link" target="_blank">1 Central Street, Boston (entrance from the store)</a>   
              </div>  
             
-             <div class="contact-item">
+             <div class="contact-item last-item">
                 <img class="contact-icon" src="../../assets/icons/pin.png" alt="icon">
                 <a href="https://maps.app.goo.gl/ZKrL8nDoyZ7GkDsC9" class="contact-link" target="_blank">18 South Park, London </a>   
                </div>

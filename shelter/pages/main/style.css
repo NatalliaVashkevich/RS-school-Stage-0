@@ -28,30 +28,24 @@
     min-height: 100vh;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0;
-  }
+   }
 
 * {
     box-sizing: border-box;
     text-decoration: none;
   }
-  .start-screen-background {
-    margin: 0;
-    height: 908px;
-    background-image: url(../../assets/images/start-screen-gradient-background.jpg);
-
-  }
+ 
   .logo {
-    padding-left: 0;
     line-height: 0;
     }
-
+.burger {
+  display: none;
+}
   .header {
     display: flex;
-    height: 100px;
-margin: 0;
-justify-content: space-between;
+    justify-content: space-between;
 align-items: flex-start; 
+background: var(--start-screen-gradient-background);
   }
 
   .logo-title {
@@ -127,9 +121,7 @@ align-items: flex-start;
   .not-only {
     display: flex;
     justify-content: flex-start;
-    height: 808px;
-    position: relative;
-    top: -808px;
+    background-color: var(--start-screen-gradient-background);
     
   }
 .start-screen {
@@ -144,8 +136,8 @@ align-items: flex-start;
     font-size: 44px;
     line-height: 130%;
     color: var(--color-light-xl);
-    width: 310px;
-    padding-top: 4.7em;
+    width: 70%;
+    padding-top: 15.5vw;
   }
 
   .start-screen-subheading {
@@ -182,26 +174,22 @@ align-items: flex-start;
     }
 
     .start-screen-puppy {
-    justify-content: flex-end;
-    align-content: flex-end;
     padding-left: 30px;
-    margin-bottom: -5px;
-  }
-
+    padding-top: 5.9vw;
+    }
 
   #about {
     display: flex;
     justify-content: space-between;
     align-content: flex-start;
-    height: 588px;
     background: var(--color-light-xl);
-    margin-top: -808px;
-  }
+    padding-bottom: 7vw;
+    }
 
   .about-pets-img {
-    padding-top: 80px;
-    padding-left: 215px;
-  }
+    padding-top: 5.9vw;
+    padding-left: 15.9vw;
+    }
 
   .about-pets-content { 
   width: 60%;
@@ -219,6 +207,7 @@ font-size: 35px;
 line-height: 130%;
 letter-spacing: 0.06em;
 color: var(--color-dark-l);
+margin-bottom: 2vw;
   }
 
   .about-pets-heading {
@@ -238,7 +227,7 @@ color: var(--color-dark-l);
   #our-friends {
 display: flex;
 flex-direction: column;
-height: 877px;
+padding-bottom: 3vw;
 background-color: var(--color-light-l);
   }
 
@@ -268,8 +257,6 @@ background-color: var(--color-light-l);
   background-color: var(--color-light-l);
   margin-top: 220px;
   }
-
-  
   
 #our-friends a {
   text-decoration: none;
@@ -278,8 +265,10 @@ background-color: var(--color-light-l);
 .button-paginator:hover {
   cursor: pointer;
   border-radius: 100px;
- 
   background-color: var(--color-primary-light);
+}
+.two-paginators {
+  display: none;
 }
 
 .card {
@@ -367,8 +356,7 @@ color: var(--color-dark-3xl);
     flex-direction: column;
     justify-content: flex-start;
     background: var(--color-light-xl);
-    height: 611px;
-    padding: 80px 40px;
+    padding: 6vw 3vw 1vw 3vw;
     }
 
   .help-heading {
@@ -396,7 +384,6 @@ column-gap: 120px;
     align-items: center;
     height: 113px;
     width: auto;
-      
   }
 
   .help-icon {
@@ -417,9 +404,9 @@ margin-top: 30px;
   }
 
   .donation {
-height: 462px;
 background: var(--color-light-l);
 display: flex;
+padding-bottom: 6.5vw;
 }
 
   
@@ -495,16 +482,14 @@ padding-left: 4px;
   }
 
   footer {
-    height: 350px;
-        background: url(../../assets/images/footer-background.png);
+    background-color: var(--start-screen-gradient-background) ;
     padding: 40px 40px 0 40px;
     }
 
     .footer-content {
       display: flex;
       margin-right: 0;
-      
-    }
+     }
 
 .contact-container {
   display: flex;
@@ -564,3 +549,403 @@ vertical-align: center;
 footer a {
   text-decoration: none;
 }
+
+@media (max-width: 1024px) {
+  
+  .logo-title {
+    padding-left: 4vw;
+  }
+
+  .logo-subtitle {
+    padding-left: 4vw;
+  }
+  
+  .nav-list {
+    margin-right: 4vw;
+  }
+  .not-only {
+    flex-direction: column;
+    background: var(--start-screen-gradient-background);
+    }
+
+  .start-screen {
+    width: 100%;
+    padding-left: 20vw;
+    padding-right: 20vw;
+   }
+   h1 {
+    padding-top: 2.4vw;
+   }
+  .button-primery {
+    margin-left: 27%;
+  }
+  .start-screen-puppy {
+    padding-top: 13vw;
+    padding-left: 22vw;
+       
+  }
+  .start-screen-puppy-img {
+    max-width: 74vw;
+   }
+
+   #about {
+    display: flex;
+    flex-direction: column-reverse;
+    }
+  .about-pets-content { 
+    width: 100%;
+    padding-left: 22vw;
+    padding-right: 22vw;
+    padding-top: 6vw;
+    }
+    h2 {
+      margin-bottom: 0;
+    }
+    .about-pets-text {
+      padding-top: 0.5vw;
+    }
+
+  .about-pets-img {
+    padding: 8.5vw 0 5.5vw 0;
+    margin: auto;
+  
+  }
+ #our-friends {
+  padding-bottom: 5.2vw;
+ }
+      .our-friends-heading {
+        text-align: center;
+        padding: 0;
+        padding-top: 7vw;
+      }
+    
+      .slider {
+        column-gap: 5vw;
+        padding-top: 7.5vw;
+        }
+
+      .slider-wrapper {
+      margin-left: 2.8vw;
+      margin-right: 2.8vw;
+    }
+    
+      .card:last-child {
+        display: none;
+      }
+      .slider-wrapper button {
+        margin-top: 32.5vw;
+        }
+#help {
+  padding-top: 10.5vw;
+}
+        .help-list {
+          padding-top: 7.8vw;
+          padding-left: 3.7vw;
+          padding-right: 3.7vw;
+          column-gap: 8vw;
+          }
+
+            .help-item {
+              width: 22vw;
+            }
+
+            .donation {
+              flex-direction: column-reverse;
+              justify-content: flex-end;
+              width: 100%;
+            }
+
+            .credit-card {
+              width: 100%;
+              padding: 5vw 25vw 0 25.1vw;
+              margin: 0;
+            }
+            .donation-heading {
+              margin-top: 0;
+             padding-top: 6vw;
+              margin-bottom: 4vw;
+              padding-right: 10vw;
+            }
+            .donation-image {
+              width: 505px;
+              height: 261px;
+             margin: 6vw auto 6.6vw auto;
+             }
+
+             footer { 
+              background-color: var(--start-screen-gradient-background) ;
+              padding: 3vw 30px 0 4.5vw;
+              }
+          
+              .footer-content {
+                display: flex;
+                flex-wrap: wrap;
+                
+              }
+              .contact-container {
+              width: 302px;
+              height: 234px;
+              margin-top: 1vw;
+              margin-bottom: 0;
+              margin-left: 4vw;
+              margin-right: 0.5vw;
+              }
+
+              .contact-image {
+                margin: auto;
+                padding-top: 8.5vw;
+              }
+            }
+            @media (width < 768px) {
+              
+              .logo-title {
+                padding-left: 6.5vw;
+                padding-right: 0;
+              }
+            
+              .logo-subtitle {
+                padding-left: 6.5vw;
+              }
+              nav {
+                width: 30%;
+              }
+              .nav-list {
+                flex-direction: column;
+                /*transform: translateX(100%);*/
+                display: none;
+                }
+                .burger {
+                  display: block;
+                  content: '';
+                  border: 1px solid var(--color-primary);
+                  background-color: var(--color-primary);
+                  width: 30px;
+                  height: 0px;
+                  position: absolute;
+                  top: 58px;
+                  right: 20px;
+                }
+
+.burger::after {
+  content: '';
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+  width: 26px;
+  height: 0px;
+  display: block;
+  position: relative;
+  top: 4px;
+  right: 7px;
+}
+
+.burger::before {
+  content: '';
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+  width: 26px;
+  height: 0px;
+  display: block;
+  position: relative;
+  top: -12px;
+  right: 7px;
+}
+
+               .start-screen {
+                width: 100%;
+                padding-left: 2vw;
+                padding-right: 3vw;
+                text-align: center;
+               }
+                
+               h1 {
+                width: 100%;
+                text-align: center;
+                padding-top: 14vw;
+                font-size: 25px;
+                letter-spacing: 0.06em;
+                padding-bottom: 5vw;
+               }
+               
+              .button-primery {
+                margin-left: 16vw;
+              }
+              
+              .start-screen-puppy {
+                padding-top: 33vw;
+                padding-left: 16.5vw;
+                min-width: 260px;
+                   
+              }
+              .start-screen-puppy-img {
+                max-width: 81vw;
+               }
+            
+               
+              .about-pets-content { 
+                width: 100%;
+                padding-left: 8vw;
+                padding-right: 8vw;
+                padding-top: 7vw;
+                
+                }
+                h2 {
+                  font-size: 25px;
+                  margin-bottom: 0;
+                  text-align: center;
+                  padding-left: 6vw;
+                }
+                .about-pets-text {
+                  padding-top: 0.5vw;
+                  text-align: justify;
+                }
+            
+              .about-pets-img {
+                margin: auto;
+                padding-bottom: 4.8vw;
+                padding-top: 9vw;
+               
+              }
+              .about-pets-img img {
+                max-width: 81vw;
+              }
+             
+             
+                  .our-friends-heading {
+                    text-align: center;
+                    padding: 0;
+                    padding-top: 7vw;
+                  }
+                
+                  .slider {
+                    padding-left: 5vw;
+                    padding-top: 12vw;
+                    }
+            
+                                 
+                .card:nth-child(2) {
+                  display: none;
+                }
+                  .paginator {
+                    display: none;
+                  }
+                .two-paginators {
+                  display: flex;
+                  justify-content: space-evenly;
+                  padding-top: 6vw;
+                                  
+                }
+                .button-paginator {
+                  border-style: none;
+                  background: var(--color-light-l);
+                }
+                .pets-button-primery {
+                  margin-top: 12vw;
+                  margin-bottom: 8.7vw;
+                }
+
+              .help-heading {
+                padding: 2vw 0 0 0;
+                text-align: center;
+              }
+                    .help-list {
+                      justify-content: space-between;
+                      padding: 12.5vw 1vw;
+                      row-gap: 30px;
+                      column-gap: 30px;
+                      }
+            
+                      .help-item {
+                        height: 87px;
+                        width: 130px;
+                        }
+                    
+                      .help-icon {
+                        height: 50px;
+                        width: auto;
+                        padding-top: 0px;
+                      }
+                    
+                      .help-icon-sign {
+                    font-size: 15px;
+                    line-height: 115%;
+                    text-align: center;
+                    margin-top: 20px;
+                      }
+
+                        .credit-card {
+                          width: 100%;
+                          padding: 13vw 5vw 0 5vw;
+                          margin: 0;
+                          text-align: center;
+                        }
+                        .donation-heading {
+                          padding: 0;
+                          margin: auto;
+                        }
+                        .donate-subheading {
+                          font-weight: 300;
+                          font-size: 15px;
+                          line-height: 110%;
+                          letter-spacing: 0;
+                          padding: 7vw 0 0 0;
+                          margin: 0;
+                        }
+                        .donation-image {
+                          width: auto;
+                          height: auto;
+                          margin: 7.5vw 9.5vw 6.5vw 9.5vw;
+                         }
+                         
+                         .credit-card-content {
+                          margin-top: 8vw;
+                          margin-left: 1vw;
+                          width: fit-content;
+                          }
+                          .card-number {
+                            font-size: 15px;
+                            line-height: 115%;
+                          }
+                          .legal-information {
+                            margin: auto;
+                            text-align: justify;
+                            width: fit-content;
+                            padding: 6vw 1vw;
+                          }
+         
+                         footer { 
+                          padding: 30px 15px 0 10px;
+                          }
+                      
+                          .footer-content {
+                            display: flex;
+                            flex-wrap: wrap;
+                            margin: 0 auto;
+                            row-gap: 40px;
+                          }
+                          .contact-title {
+                            font-size: 25px;
+                            text-align: center;
+                            padding: 0 20px;
+                          }
+                          
+                          .contact-container {
+                          margin: 0;
+                          height: 65vw;
+                          }
+                          .contact-container:nth-child(2) {
+                            height: 70vw;
+                          }
+                          .contact-item {
+                            margin: 0 auto;
+                          }
+                          .last-item {
+                            margin-left: 0;
+                            margin-top: 3vw;
+                          }
+                         
+            
+                          .contact-image {
+                            padding: 0;
+                            margin: 0 auto;
+                            max-width: 260px;
+                          }
