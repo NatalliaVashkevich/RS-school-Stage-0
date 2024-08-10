@@ -482,7 +482,7 @@ padding-left: 4px;
   }
 
   footer {
-    background-color: var(--start-screen-gradient-background) ;
+    background-color: var(--start-screen-gradient-background);
     padding: 40px 40px 0 40px;
     }
 
@@ -949,3 +949,4 @@ footer a {
                             margin: 0 auto;
                             max-width: 260px;
                           }
+                        }
