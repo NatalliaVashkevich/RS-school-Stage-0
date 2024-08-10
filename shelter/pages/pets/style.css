@@ -200,7 +200,7 @@ height: 52px;
   }
 
   footer {
-    background: url(../../assets/images/footer-background.png);
+    background: var(--start-screen-gradient-background);
     padding: 40px 40px 0 40px;
     }
 
@@ -322,7 +322,6 @@ footer a {
     }
 
     footer { 
-       background-color: var(--start-screen-gradient-background) ;
        padding: 3vw 4vw 0 4.5vw;
        }
    
