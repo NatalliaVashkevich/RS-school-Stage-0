@@ -712,93 +712,158 @@ footer a {
                 padding-top: 8.5vw;
               }
             }
-            @media (width < 768px) {
-              
-              .logo-title {
-                padding-left: 6.5vw;
-                padding-right: 0;
-              }
+  @media (width < 768px) {
+    body.noscroll {
+      overflow: hidden; /*при вызове popup блокируется прокрутка экрана*/
+    }
+    .logo-title {
+      padding-left: 6.5vw;
+      padding-right: 0;
+    }
             
-              .logo-subtitle {
-                padding-left: 6.5vw;
-              }
-              nav {
-                width: 30%;
-              }
-              .nav-list {
-                flex-direction: column;
-                /*transform: translateX(100%);*/
-                display: none;
-                }
-                .burger {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  padding: 45px 0px;
-                  cursor: pointer;
-                }
-                .bar {
-                  display: block;
-                  width: 30px;
-                  height: 0px;
-                  margin: 4px 0;
-                  border: 1px solid var(--color-primary);
-                  transition: 0.2s;
-                }
-                .nav-wrap {
-                  display: flex;
-                  margin: 0 auto;
-                  justify-content: center;
-                                  
-                }
+    .logo-subtitle {
+      padding-left: 6.5vw;
+    }
+     nav {
+       width: 30%;
+    }
+    .nav-list {
+      flex-direction: column;
+      /*transform: translateX(100%);*/
+      display: none;
+    }
+    .burger {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 45px 0px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .burger.active {
+      transform: rotate(90deg);
+    }
+    .bar {
+      display: block;
+      width: 30px;
+      height: 0px;
+      margin: 4px 0;
+      border: 1px solid var(--color-primary);
+      transition: 0.2s;
+    }
+    .nav-wrap {
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+    }
 
-               .start-screen {
-                width: 100%;
-                padding-left: 2vw;
-                padding-right: 3vw;
-                text-align: center;
-               }
+    .popup {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      top: 0;
+      z-index: 100;
+      width: 320px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 20px;
+      background-color: var(--color-dark-3xl);
+      transition: 0.2s;
+    }
+      
+      .popup-burger {
+        display: flex;
+        padding: 15px 0 15px 250px;
+        margin: 0;
+        cursor: pointer;
+      }
+      .popup-bar {
+        display: block;
+        width: 0px;
+        height: 30px;
+        margin: 0 4px;
+        border: 1px solid var(--color-primary);
+        transition: 0.2s;
+      }
+      .popup-list{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 40px;
+        padding-left: 0;
+        margin-top: 160px;
+      }
+      
+      .popup-link {
+        text-decoration: none;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 160%;
+        color: var(--color-dark-s);
+        list-style: none;
+        text-decoration: none;
+      }
+      
+      .active {
+        border-bottom: 3px solid var(--color-primary);
+        padding-bottom: 3px;
+        text-decoration: none;
+        pointer-events: none; /*неактивная ссылка*/
+      }
+
+    .popup.open {
+      right: 0;
+    }
+    
+
+    .start-screen {
+      width: 100%;
+      padding-left: 2vw;
+      padding-right: 3vw;
+      text-align: center;
+    }
                 
-               h1 {
-                width: 100%;
-                text-align: center;
-                padding-top: 3vw;
-                font-size: 25px;
-                letter-spacing: 0.06em;
-                padding-bottom: 5vw;
-               }
+    h1 {
+      width: 100%;
+      text-align: center;
+      padding-top: 3vw;
+      font-size: 25px;
+      letter-spacing: 0.06em;
+      padding-bottom: 5vw;
+    }
                
-              .button-primery {
-                margin-left: 16vw;
-              }
+    .button-primery {
+      margin-left: 16vw;
+    }
               
-              .start-screen-puppy {
-                padding-top: 33vw;
-                padding-left: 16.5vw;
-                min-width: 260px;
-                   
-              }
-              .start-screen-puppy-img {
-                max-width: 81vw;
-               }
+    .start-screen-puppy {
+      padding-top: 33vw;
+      padding-left: 16.5vw;
+      min-width: 260px;
+    }
+    .start-screen-puppy-img {
+      max-width: 81vw;
+    }
             
-               
-              .about-pets-content { 
-                width: 100%;
-                padding-left: 8vw;
-                padding-right: 8vw;
-                padding-top: 6vw;
-                }
-                h2 {
-                  font-size: 25px;
-                  margin-bottom: 0;
-                  text-align: center;
-                  padding-left: 6vw;
-                }
-                .about-pets-text {
-                  padding-top: 0.5vw;
-                  text-align: justify;
-                }
+    .about-pets-content { 
+      width: 100%;
+      padding-left: 8vw;
+      padding-right: 8vw;
+      padding-top: 6vw;
+    }
+    h2 {
+      font-size: 25px;
+      margin-bottom: 0;
+      text-align: center;
+      padding-left: 6vw;
+    }
+    .about-pets-text {
+      padding-top: 0.5vw;
+      text-align: justify;
+    }
             
               .about-pets-img {
                 margin: auto;
