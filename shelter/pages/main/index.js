@@ -1,1 +1,26 @@
-console.log('1.Вёрстка страницы Main соответствует макету при ширине экрана 1280px: +13\n2.Вёрстка страницы Main соответствует макету при ширине экрана 768px: +13\n3.Вёрстка страницы Main соответствует макету при ширине экрана 320px: +13\n4.Вёрстка страницы Pets соответствует макету при ширине экрана 1280px: +5\n5.Вёрстка страницы Pets соответствует макету при ширине экрана 768px: +5\n6.Вёрстка страницы Pets соответствует макету при ширине экрана 320px: +5\n7.Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки, справа от отдельных блоков не появляются белые поля. Весь контент страницы при этом сохраняется: не обрезается и не удаляется: +20\n8.Верстка резиновая: при плавном изменении размера экрана от 1280px до 320px верстка подстраивается под этот размер, элементы верстки меняют свои размеры и расположение, не наезжают друг на друга, изображения могут менять размер, но сохраняют правильные пропорции (Примеры неправильной и правильной реализации): +6\n9.При ширине экрана меньше 768px на обеих страницах меню в хедере скрывается, появляется иконка бургер-меню: +4\n10.Верстка обеих страниц валидная: +8\nИтого: 92');
+const body = document.body;
+const burger = document.querySelector(".burger");
+const popup = document.querySelector(".popup");
+const filter = document.querySelector(".body-filter");
+
+burger.addEventListener("click", burgerActive);
+function burgerActive() {
+    burger.classList.toggle("active");
+    popup.classList.toggle("open");
+    body.classList.toggle("noscroll");
+    filter.classList.toggle("active");
+}
+
+const links = Array.from(popup.children);
+links.forEach((link) => {
+    link.addEventListener("click", closeOnClick);
+});
+
+function closeOnClick() {
+    burger.classList.remove("active");
+    popup.classList.remove("open");
+    body.classList.remove("noscroll");
+    filter.classList.remove("active");
+  }
+
+
