@@ -6,23 +6,50 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../../assets/icons/icons8-кошка-16.png">
     <title>Cozy House</title>
-    <script src="./index.js"></script>
+    
 </head>
 <body>
+    <div class="body-filter"></div>
     <header class="header">
         <a href="#" class="logo">
             <div class="logo-title">Cozy House</div>
             <div class="logo-subtitle">Shelter for pets in Boston</div>
         </a>
         <nav>
-            <button class="burger"></button>
-            <ul class="nav-list">
-                <li class="nav-item"><a href="#about" class="nav-link-active">About the shelter</a></li>
-                <li class="nav-item"><a href="../pets/index.html" class="nav-link">Our pets</a></li>
-                <li class="nav-item"><a href="#help" class="nav-link">Help the shelter</a></li>
-                <li class="nav-item"><a href="#footer" class="nav-link">Contacts</a></li>
-            </ul>
-        </nav>       
+            <div class="container">
+                <div class="nav-wrap">
+                    
+                    <div class="burger">
+                        <span class="bar"></span> 
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+
+                       <ul class="nav-list">
+                         <li class="nav-item"><a href="#about" class="nav-link-active">About the shelter</a></li>
+                         <li class="nav-item"><a href="../pets/index.html" class="nav-link">Our pets</a></li>
+                         <li class="nav-item"><a href="#help" class="nav-link">Help the shelter</a></li>
+                         <li class="nav-item"><a href="#footer" class="nav-link">Contacts</a></li>
+                       </ul>
+
+                </div>
+            </div>
+        </nav>
+        <div class="popup">
+            <div class = "popup-header">
+                <div class="popup-burger">
+                    <span class="popup-bar"></span> 
+                    <span class="popup-bar"></span>
+                    <span class="popup-bar"></span>
+                </div>
+            </div>
+            <ul class="popup-list">
+                <li class="popup-item"><a href="#about" class="popup-link active">About the shelter</a></li>
+                <li class="popup-item"><a href="../pets/index.html" class="popup-link">Our pets</a></li>
+                <li class="popup-item"><a href="#help" class="popup-link">Help the shelter</a></li>
+                <li class="popup-item"><a href="#footer" class="popup-link">Contacts</a></li>
+              </ul>  
+        </div>       
     </header>
     
 
@@ -198,6 +225,6 @@
         
         </div>
     </footer>
-    
+    <script src="./index.js"></script>
 </body>
 </html>
