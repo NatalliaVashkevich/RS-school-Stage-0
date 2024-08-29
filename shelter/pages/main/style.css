@@ -55,6 +55,9 @@
   .popup {
     display: none;
   }
+  .body-filter {
+    display: none;
+  }
 
   .header {
     display: flex;
@@ -565,6 +568,40 @@ vertical-align: center;
 footer a {
   text-decoration: none;
 }
+@media (hover :hover) {
+    .logo>div:hover {
+      color: var(--color-light-xl);
+    }
+    .nav-link:hover {
+      color: var(--color-light-s);
+    }
+    .button-primery:hover {
+      background: var(--color-primary-light);
+    }
+    .button-paginator:hover {
+      cursor: pointer;
+      border-radius: 100px;
+      background-color: var(--color-primary-light);
+    }
+    .card:hover {
+      box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+      .button-secondary {
+      background: var(--color-primary-light);
+      transition: 0.3s;
+      }
+    }
+    .pets-button-primery:hover {
+      background: var(--color-primary-light);
+    }
+    .card-number:hover {
+      transform: scale(1.03);
+    }
+    .contact-link:hover {
+      color: var(--color-light-s);
+    }
+
+  }
+
 
 @media (max-width: 1024px) {
   
@@ -716,6 +753,18 @@ footer a {
     body.noscroll {
       overflow: hidden; /*при вызове popup блокируется прокрутка экрана*/
     }
+    .body-filter.active {
+      display:block;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: black;
+      opacity: 0.4;
+    }
+
     .logo-title {
       padding-left: 6.5vw;
       padding-right: 0;
@@ -729,7 +778,6 @@ footer a {
     }
     .nav-list {
       flex-direction: column;
-      /*transform: translateX(100%);*/
       display: none;
     }
     .burger {
@@ -739,6 +787,7 @@ footer a {
       margin: 45px 0px;
       cursor: pointer;
       transition: 0.2s;
+      
     }
     .burger.active {
       transform: rotate(90deg);
@@ -769,7 +818,7 @@ footer a {
       flex-direction: column;
       padding: 30px 20px;
       background-color: var(--color-dark-3xl);
-      transition: 0.2s;
+      transition: 0.3s;
     }
       
       .popup-burger {
@@ -865,45 +914,44 @@ footer a {
       text-align: justify;
     }
             
-              .about-pets-img {
-                margin: auto;
-                padding-bottom: 4.8vw;
-                padding-top: 9vw;
-               
-              }
-              .about-pets-img img {
-                max-width: 81vw;
-              }
-             
-             
-                  .our-friends-heading {
-                    text-align: center;
-                    padding: 0;
-                    padding-top: 7vw;
-                  }
+    .about-pets-img {
+      margin: auto;
+      padding-bottom: 4.8vw;
+      padding-top: 9vw;
+    }
+    .about-pets-img img {
+      max-width: 81vw;
+    }
                 
-                  .slider {
-                    padding-left: 5vw;
-                    padding-top: 12vw;
-                    }
+    .our-friends-heading {
+      text-align: center;
+      padding: 0;
+      padding-top: 7vw;
+    }
+                
+    .slider {
+      padding-left: 5vw;
+      padding-top: 12vw;
+    }
             
-                                 
-                .card:nth-child(2) {
-                  display: none;
-                }
-                  .paginator {
-                    display: none;
-                  }
-                .two-paginators {
-                  display: flex;
-                  justify-content: space-evenly;
-                  padding-top: 6vw;
-                                  
-                }
-                .button-paginator {
-                  border-style: none;
-                  background: var(--color-light-l);
-                }
+    .card:nth-child(2) {
+      display: none;
+    }
+    
+    .paginator {
+      display: none;
+    }
+
+    .two-paginators {
+      display: flex;
+      justify-content: space-evenly;
+      padding-top: 6vw;
+    }
+
+    .button-paginator {
+      border-style: none;
+      background: var(--color-light-l);
+    }
                 .pets-button-primery {
                   margin-top: 12vw;
                   margin-bottom: 8.7vw;
