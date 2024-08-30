@@ -373,7 +373,7 @@ footer a {
       justify-content: flex-start;
       padding: 30px 20px;
       background-color: var(--color-light-s);
-      transition: 0.3s;
+      transition:  0.3s;
       padding-left: 15px;
     }
     nav.open {
@@ -410,8 +410,7 @@ footer a {
         right: 20px;
         margin: 0;
         cursor: pointer;
-        transition: 0.2s;
-        
+        transition: 0.3s;
       }
       .burger.active {
         transform: rotate(90deg);
@@ -437,7 +436,6 @@ footer a {
 .pets {
   padding: 0;
  }
-
  
 .card:nth-child(4) {
 display: none;

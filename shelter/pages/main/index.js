@@ -21,6 +21,14 @@ function closeOnClick() {
     popup.classList.remove("open");
     body.classList.remove("noscroll");
     filter.classList.remove("active");
-  }
+  };
+  
+  document.addEventListener("click", (e) => {
+	const popupActive = e.composedPath().includes(".popup");
+ 	if (!popupActive) {
+	body.addEventListener("click", closeOnClick);
+	}
+});
+
 
 
