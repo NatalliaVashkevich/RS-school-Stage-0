@@ -16,6 +16,7 @@ links.forEach((link) => {
     link.addEventListener("click", closeOnClick);
 });
 
+
 function closeOnClick() {
     burger.classList.remove("active");
     popup.classList.remove("open");
@@ -23,11 +24,12 @@ function closeOnClick() {
     filter.classList.remove("active");
 }
 
-document.addEventListener("click", (e) => {
+body.addEventListener("click", (e) => {
 	const popupActive = e.composedPath().includes(".popup");
  	if (!popupActive) {
-	body.addEventListener("click", closeOnClick);
+	filter.addEventListener("click", closeOnClick);
 	}
 });
+
 
 

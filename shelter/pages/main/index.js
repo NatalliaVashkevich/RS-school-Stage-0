@@ -5,6 +5,7 @@ const filter = document.querySelector(".body-filter");
 
 burger.addEventListener("click", burgerActive);
 function burgerActive() {
+    console.log("clicked");
     burger.classList.toggle("active");
     popup.classList.toggle("open");
     body.classList.toggle("noscroll");
@@ -23,10 +24,10 @@ function closeOnClick() {
     filter.classList.remove("active");
   };
   
-  document.addEventListener("click", (e) => {
+  body.addEventListener("click", (e) => {
 	const popupActive = e.composedPath().includes(".popup");
  	if (!popupActive) {
-	body.addEventListener("click", closeOnClick);
+	filter.addEventListener("click", closeOnClick);
 	}
 });
 
