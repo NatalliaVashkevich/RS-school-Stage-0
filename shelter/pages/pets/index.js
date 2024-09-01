@@ -1,6 +1,7 @@
 const body = document.body;
 const burger = document.querySelector(".burger");
 const popup = document.querySelector("nav");
+const list = document.querySelector(".nav-list");
 const filter = document.querySelector(".body-filter");
 
 burger.addEventListener("click", burgerActive);
@@ -11,10 +12,11 @@ function burgerActive() {
     filter.classList.toggle("active");
 }
 
-const links = Array.from(popup.children);
+const links = Array.from(list.children);
 links.forEach((link) => {
     link.addEventListener("click", closeOnClick);
 });
+
 
 function closeOnClick() {
     burger.classList.remove("active");
@@ -23,11 +25,12 @@ function closeOnClick() {
     filter.classList.remove("active");
 }
 
-document.addEventListener("click", (e) => {
+body.addEventListener("click", (e) => {
 	const popupActive = e.composedPath().includes(".popup");
  	if (!popupActive) {
-	body.addEventListener("click", closeOnClick);
+	filter.addEventListener("click", closeOnClick);
 	}
 });
+
 
 
