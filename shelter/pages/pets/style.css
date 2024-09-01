@@ -400,18 +400,15 @@ footer a {
     header {
       padding: 9.5vw 6vw;
     }         
-     .burger {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
-        position: fixed;
-        top: 46px;
-        right: 20px;
-        margin: 0;
-        cursor: pointer;
-        transition: 0.3s;
-      }
+    .burger {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      right: -10vw;
+      top: 5vw;
+      cursor: pointer;
+      transition: 0.3s;
+    }
       .burger.active {
         transform: rotate(90deg);
         z-index: 100;
