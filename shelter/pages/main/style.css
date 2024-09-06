@@ -43,15 +43,7 @@ body {
   .burger {
     display: none;
   }
-/*.container {
-    max-width: 767px;
-  }
-  .nav-wrap {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-  }*/
-  
+ 
   .body-filter {
     display: none;
   }
@@ -147,7 +139,7 @@ body {
     line-height: 130%;
     color: var(--color-light-xl);
     width: 70%;
-    padding-top: 9.5vw;
+    padding-top: 10vw;
   }
 
   .start-screen-subheading {
@@ -192,7 +184,7 @@ body {
 
   .about-pets-img {
     padding-top: 6vw;
-    padding-left: 16vw;
+    padding-left: 17vw;
     }
 
   .about-pets-content { 
@@ -237,17 +229,21 @@ background-color: var(--color-light-l);
 
   .our-friends-heading {
     text-align: center;
-    padding-top: 52px;
+    padding-top: 57px;
     padding-left: 410px;
     padding-right: 410px;
   }
 
   .slider {
+    position: relative;
+    right: 0;
     display: flex;
     justify-content: space-between;
-    column-gap: 90px;
+    column-gap: 11vw;
     margin: 0;
     padding-top: 30px;
+    max-width: 1080px;
+    overflow: hidden;
     }
 
 .slider-wrapper {
@@ -261,11 +257,7 @@ background-color: var(--color-light-l);
   background-color: var(--color-light-l);
   margin-top: 220px;
   }
-  
-#our-friends a {
-  text-decoration: none;
-}
-
+ 
 .button-paginator:hover {
   cursor: pointer;
   border-radius: 100px;
@@ -276,13 +268,12 @@ background-color: var(--color-light-l);
 }
 
 .card {
-  display: flex;
+  display: block;
   flex-direction: column;
-
   border-radius: 9px;
-width: 270px;
-height: 435px;
-background: var(--color-light-s);
+  width: 270px;
+  height: 435px;
+  background: var(--color-light-s);
 }
 
 .card:hover {
@@ -296,59 +287,59 @@ background: var(--color-light-s);
 
   .pet-name {
     font-family: var(--font-family);
-font-weight: 400;
-font-size: 20px;
-letter-spacing: 0.06em;
-text-align: center;
-color: var(--color-dark-l);
-line-height: 2em;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--color-dark-l);
+    line-height: 2em;
   }
 
   .button-secondary {
     display: flex;
-align-items: center;
-justify-content: flex-start;
-flex-direction: column;
-margin-left: 43px;
-margin-top: 0px;
-gap: 10px;
-border: 2px solid var(--color-primary);
-border-radius: 100px;
-padding: 15px 35px;
-width: 187px;
-height: 52px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 43px;
+    margin-top: 0px;
+    gap: 10px;
+    border: 2px solid var(--color-primary);
+    border-radius: 100px;
+    padding: 15px 35px;
+    width: 187px;
+    height: 52px;
 
-font-family: var(--font-family);
-font-weight: 400;
-font-size: 17px;
-line-height: 130%;
-letter-spacing: 0.06em;
-color: var(--color-dark-3xl);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-3xl);
   }
 
   .pets-button-primery {
     display: flex;
-align-items: center;
-justify-content: flex-start;
-flex-direction: column;
-gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
 
-border-radius: 100px;
-padding: 15px 30px;
-width: 261px;
-height: 52px;
-margin: 60px auto;
-border-color: var(--color-primary);
-border-style: hidden;
+    border-radius: 100px;
+    padding: 15px 30px;
+    width: 261px;
+    height: 52px;
+    margin: 60px auto;
+    border-color: var(--color-primary);
+    border-style: hidden;
 
-background: var(--color-primary);
+    background: var(--color-primary);
 
-font-family: var(--font-family);
-font-weight: 400;
-font-size: 17px;
-line-height: 130%;
-letter-spacing: 0.06em;
-color: var(--color-dark-3xl);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-3xl);
   }
 
   .pets-button-primery:hover {
@@ -360,7 +351,7 @@ color: var(--color-dark-3xl);
     flex-direction: column;
     justify-content: flex-start;
     background: var(--color-light-xl);
-    padding: 6vw 3vw 1vw 3vw;
+    padding: 7vw 3vw 1vw 3vw;
     }
 
   .help-heading {
@@ -410,7 +401,7 @@ margin-top: 30px;
   .donation {
 background: var(--color-light-l);
 display: flex;
-padding-bottom: 6.5vw;
+padding-bottom: 7.5vw;
 }
 
   
