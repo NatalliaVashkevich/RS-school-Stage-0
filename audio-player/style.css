@@ -1,0 +1,95 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100vh;
+    margin: 0;
+    background-image: url("assets/img/dontstartnow.png");
+    background-repeat: no-repeat;
+}
+
+.background-image {
+    width: 100vw;
+    height: 100vh;
+    filter: blur(10px);
+    margin: 10px;
+}
+.player-wrapper {
+    position: absolute;
+    height: 400px;
+    width: 330px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.cover-image {
+    overflow: hidden;
+    max-height: 270px;
+}
+.controls {
+    display: grid;
+    height: 130px;
+    padding: 15px 20px 0 20px;
+    background: linear-gradient(to right, grey, rgb(228, 226, 226));
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 20% 1fr 20%;
+}
+.playPauseButton {
+    width: 50px;
+    height: auto;
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    margin: auto;
+}
+.artist {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+    grid-row: 1;
+    grid-column: 2;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: white;
+    grid-row: 2;
+    grid-column: 2;
+    padding-left: 5px;
+}
+.prevSong {
+    width: 30px;
+    height: auto;
+    grid-row: 1;
+    grid-column: 3;
+   margin: auto;
+}
+.nextSong {
+    width: 30px;
+    height: auto;
+    grid-row: 2;
+    grid-column: 3;
+    margin: 0 auto;
+}
+.progressBar {
+    margin: auto;
+    height: 5px;
+    width: 80%;
+    grid-row: 3;
+    grid-column: 1 / span 3;
+}
+
+
+
