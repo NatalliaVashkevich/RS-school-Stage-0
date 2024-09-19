@@ -9,8 +9,7 @@ html, body {
 body {
     width: 100vh;
     margin: 0;
-    background-image: url("assets/img/dontstartnow.png");
-    background-repeat: no-repeat;
+   
 }
 
 .background-image {
@@ -31,19 +30,22 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border-radius: 10px;
 }
 .cover-image {
     overflow: hidden;
     max-height: 270px;
+    
 }
 .controls {
     display: grid;
     height: 130px;
-    padding: 15px 20px 0 20px;
+    padding: 15px 20px 10px 20px;
     background: linear-gradient(to right, grey, rgb(228, 226, 226));
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 20% 1fr 20%;
+    grid-template-columns: 20% 60% 20%;
 }
+
 .playPauseButton {
     width: 50px;
     height: auto;
@@ -88,7 +90,7 @@ body {
     height: 5px;
     width: 80%;
     grid-row: 3;
-    grid-column: 1 / span 3;
+    grid-column: 1 / 4;
 }
 
 
