@@ -148,13 +148,13 @@ a {
     width: 100%;
     cursor: pointer;
 }
-.current-time {
+.duration-time {
     align-self: flex-end;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(11, 197, 11);
     font-size: 12px;
 }
-.duration-time {
+.current-time {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     font-size: 12px; 
