@@ -1,4 +1,6 @@
 body {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
     margin: 0;
@@ -17,8 +19,30 @@ body {
     filter: blur(10px);
     margin: 0;
     z-index: -1;
+}
+
+
+footer {
+    padding: 0 20px;
+    position: relative;
+    top: 90%;
+    display: flex;
+    justify-content: flex-start;
+    height: 10%;
     
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: white;
     
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.logo {
+    height: 40px;
+    padding-right: 10px;
+    cursor: pointer;
 }
 .player-wrapper {
     position: absolute;
@@ -33,37 +57,42 @@ body {
     flex-direction: column;
     overflow: hidden;
     border-radius: 10px;
-   
     box-shadow: 0 0 30px black;
-    
     
 }
 .cover-image {
     overflow: hidden;
     max-height: 270px;
-
-    
 }
 .controls {
     display: grid;
     height: 130px;
-    padding: 15px 20px 10px 20px;
-    background: linear-gradient(to right, grey, rgb(228, 226, 226));
+    padding: 10px 15px 10px 10px;
+    background: linear-gradient(to right, rgb(27, 27, 27), rgb(138, 124, 124));
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 20% 60% 20%;
 }
-
-.playPauseButton {
-    width: 50px;
+.play-pause-button {
     height: auto;
     grid-row: 1 / span 2;
     grid-column: 1;
     margin: auto;
+    filter: invert(1);
+    cursor: pointer; 
 }
+
+.pause-button {
+    display: none;
+    width: 50px;
+}
+.play-button {
+    width: 50px;
+}
+
 .artist {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
-    color: green;
+    font-size: 17px;
+    color: rgb(8, 177, 8);
     font-weight: bold;
     grid-row: 1;
     grid-column: 2;
@@ -72,33 +101,69 @@ body {
 }
 .title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     color: white;
     grid-row: 2;
     grid-column: 2;
     padding-left: 5px;
 }
-.prevSong {
+.next-song {
     width: 30px;
     height: auto;
     grid-row: 1;
     grid-column: 3;
    margin: 0 auto;
+   filter: invert(1);
+   cursor: pointer;
 }
-.nextSong {
+
+.prev-song {
     width: 30px;
     height: auto;
     grid-row: 2;
     grid-column: 3;
     margin: 0 auto;
+    filter: invert(1);
+    cursor: pointer;
 }
-.progressBar {
-    margin: auto;
-    height: 5px;
-    width: 80%;
-    grid-row: 3;
-    grid-column: 1 / 4;
+.play-pause-button:hover,
+.next-song:hover,
+.prev-song:hover {
+    filter: invert(0.8);
+    transition: 0.2s;
 }
 
+.controls-bar {
+    grid-row: 3;
+    grid-column: 1 / 4;
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.playing {
+    height: 5px;
+    background-color: black;
+    margin: auto;
+    width: 80%;
+}
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    cursor: pointer;
+    background-color: rgb(13, 150, 9);
+    
+}
+.duration-time {
+    align-self: flex-end;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(11, 197, 11);
+    font-size: 12px;
+}
+.current-time {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 12px; 
+}
 
 
