@@ -1,30 +1,51 @@
+
+const arrOfSounds = {
+    
+        img: ["assets/img/Honkcover.jpeg", "assets/img/The Beatles.jpeg",],
+        track: ["assets/audio/The Rolling Stones – Living In A Ghost Town.mp3", "assets/audio/The Beatles – Now And Then.mp3",],
+        artist: ["The Rolling Stones", "The Beatles",],
+        title: ["Living In A Ghost Town", "Now And Then",],
+    };
+    
 const audio = document.querySelector(".audio-file");
-const playPauseButton = document.querySelector(".play-pause-button");
-const playButton = document.querySelector(".play-button");
-const pauseButton = document.querySelector(".pause-button");
+const backgroundImage = document.querySelector(".background-image");
+const coverImage = document.querySelector(".cover-image");
+const playPauseBtn = document.querySelector(".play-pause-button");
+const playBtn = document.querySelector(".play-button");
+const pauseBtn = document.querySelector(".pause-button");
 const currentTimeOnDisplay = document.querySelector(".current-time");
 const durationTimeOnDisplay = document.querySelector(".duration-time");
-const nextSong = document.querySelector(".next-song");
-const prevSong = document.querySelector(".prev-song");
+const nextSongBtn = document.querySelector(".next-song");
+const prevSongBtn = document.querySelector(".prev-song");
+
+const artistName = document.querySelector(".artist");
+const title = document.querySelector(".title");
+let playNow = 0;
+
+function fillData(playNow) {
+    backgroundImage.src = arrOfSounds.img[playNow];
+    coverImage.src = arrOfSounds.img[playNow];
+    audio.src = arrOfSounds.track[playNow];
+    artistName.innerHTML = arrOfSounds.artist[playNow];
+    title.innerHTML = arrOfSounds.title[playNow];
+};
+fillData(playNow);
 
 let isPlaying = false;
-playPauseButton.addEventListener("click", () => {
+playPauseBtn.addEventListener("click", () => {
     if(isPlaying) {
         audio.pause();
-        pauseButton.style.display = "none";
-        playButton.style.display = "block";
+        pauseBtn.style.display = "none";
+        playBtn.style.display = "block";
         
     } else {
         
         audio.play();
-        pauseButton.style.display = "block";
-        playButton.style.display = "none";
+        pauseBtn.style.display = "block";
+        playBtn.style.display = "none";
     } 
     isPlaying = !isPlaying;
 });
-
-
-
 
 
 const progressBar = document.querySelector(".progress-bar");
@@ -39,10 +60,15 @@ audio.addEventListener("timeupdate", () => {
     currentTimeOnDisplay.textContent = `0:${currentSeconds}`;
 } else {
     currentTimeOnDisplay.textContent = `${currentMinutes}:${currentSeconds}`;
-};
+}
+const durationTime = audio.duration;
+    
+    const playingTime = (currentTime /durationTime) * 100;
+    progressBar.style.width = `${playingTime}%`;
+
 });
 
-audio.addEventListener("timeupdate", () => {
+audio.addEventListener("loadeddata", () => {
     const durationTime = audio.duration;
     const durationMinutes = Math.floor( durationTime / 60);
     const durationSeconds = Math.floor( durationTime % 60);
@@ -53,42 +79,40 @@ audio.addEventListener("timeupdate", () => {
 }
 });
 
-audio.addEventListener("timeupdate", () => {
-    const durationTime = audio.duration;
-    const currentTime = audio.currentTime;
-    const playingTime = (currentTime /durationTime) * 100;
-    progressBar.style.width = `${playingTime}%`;
-  
+
+
+nextSongBtn.addEventListener('click', () => {
+    if(playNow === arrOfSounds.track.length - 1) {
+        playNow = 0;
+    } else {
+        playNow += 1; 
+    }
+    fillData(playNow);
+    audio.play();
+    pauseBtn.style.display = "block";
+    playBtn.style.display = "none";
+
 });
 
-const arrOfSounds = [
-    {
-        "img": "../assets/img/Honkcover.jpeg",
-        "audio": "../assets/audio/The Rolling Stones – Living In A Ghost Town.mp3",
-        "artist": "The Rolling Stones",
-        "title": "Living In A Ghost Town",
-    },
-    {
-        "img": "../assets/img/The Beatles.jpeg",
-        "audio": "../assets/audio/The Beatles – Now And Then.mp3",
-        "artist": "The Beatles",
-        "title": "Now And Then",  
-    },
-];
+prevSongBtn.addEventListener('click', () => {
+    if(playNow === 0) {
+        playNow = arrOfSounds.track.length - 1;
+    } else {
+        playNow -= 1; 
+    }
+    fillData(playNow);
+    audio.play();
+    pauseBtn.style.display = "block";
+    playBtn.style.display = "none";
 
-function fillData() {
-    for (let i = 0; i < arrOfSounds.length; i++) {
-        const main = document.querySelector("main");
-        const image = document.createElement("img");
-        image.src = arrOfSounds[i].img;
-        main.afterbegin(image);
-        
+});
+
+
 
 
     
-    }
-};
-fillData();
+
+
     
     
    
