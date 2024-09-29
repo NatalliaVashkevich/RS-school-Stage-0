@@ -1,0 +1,86 @@
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+   
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 20vh;
+    width: 100%;
+    border-bottom: 5px solid rgb(85, 85, 104);
+    background-color: rgb(212, 212, 224);
+}
+.header-logo {
+    height: 50px;
+}
+
+.search-form {
+    width: 350px;
+    height: 50px;
+}
+.search-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid grey;
+    border-radius: 20px;
+}
+.btn-search {
+    position: relative;
+    background-color: transparent;
+    left: 290px;
+    top: -32px;
+    border-style: none;
+    
+}
+.lupa {
+    width: 50%;
+}
+
+main {
+    flex-grow: 1;
+}
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.image {
+    max-width: 350px;
+}
+
+footer {
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-start;
+    height: 10%;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+.logo {
+    height: 40px;
+    padding-right: 10px;
+    cursor: pointer;
+}
