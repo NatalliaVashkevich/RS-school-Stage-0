@@ -28,6 +28,7 @@ body {
 
 .search-form {
     width: 350px;
+    height: 50px;
 }
 .search-input {
     width: 100%;
@@ -36,9 +37,30 @@ body {
     border: 1px solid grey;
     border-radius: 20px;
 }
+.btn-search {
+    position: relative;
+    background-color: transparent;
+    left: 290px;
+    top: -32px;
+    border-style: none;
+    
+}
+.lupa {
+    width: 50%;
+}
 
 main {
     flex-grow: 1;
+}
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.image {
+    max-width: 350px;
 }
 
 footer {
