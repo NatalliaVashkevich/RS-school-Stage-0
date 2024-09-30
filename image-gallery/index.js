@@ -7,23 +7,28 @@ const searchInput = document.querySelector(".search-input");
 
 let query = 'random';
 
-
+console.log('Поиск реализовать пока не удалось');
 
 async function getData() {
-    const res = await fetch(`${url}?query=${query}&per_page=9&orientation=landscape&client_id=${accessKey}`)
-    const data = await res.json();
-    console.log(data);
+    const result = await fetch(`${url}?query=${query}&per_page=9&orientation=landscape&client_id=${accessKey}`)
+    const data = await result.json();
+    
    
-}
-getData()
+    console.log(data);
+    
+    
+           
+};
+const data = getData(`${url}?query=${query}&per_page=9&orientation=landscape&client_id=${accessKey}`);
+console.log(data[0].results.urls.regular);
 
-function fillGallery() {
-    for (let i = 0; i < 9; i++) {
-        const img = document.createElement('img');
-        img.src = getData(data.results[i].urls.regular);
-        img.alt = 'Image';
-        imageGallery.appendChild('img');
-
-    };
+function fill(){
+    const img = document.querySelectorAll(".img");
+    img.src = 'assets/svg/icons8-камера-24.png';
 }
-fillGallery();
+fill();
+
+
+    
+     
+    
