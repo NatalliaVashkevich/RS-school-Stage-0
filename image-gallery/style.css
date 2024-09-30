@@ -1,7 +1,7 @@
 html, body {
     min-height: 100vh;
     margin: 0;
-    overflow: hidden;
+    
 }
 
 * {
@@ -36,12 +36,13 @@ body {
     padding: 0 15px;
     border: 1px solid grey;
     border-radius: 20px;
+
 }
 .btn-search {
     position: relative;
     background-color: transparent;
-    left: 290px;
-    top: -32px;
+    left: 83%;
+    top: -60%;
     border-style: none;
     
 }
@@ -55,12 +56,14 @@ main {
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
 }
-.image {
-    max-width: 350px;
+    
+.img {
+    max-width: 30%;
+    border-radius: 5px;
+    margin: 1%;
 }
 
 footer {
