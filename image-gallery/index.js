@@ -1,34 +1,29 @@
 const url = 'https://api.unsplash.com/search/photos';
 const accessKey = '1mbj8UuQ4cGTbQzijdVcVTf2xs6a5NfZQGFS6GdWRmA';
 
-const body = document.querySelector("body");
+
 const imageGallery = document.querySelector(".image-gallery");
 const searchInput = document.querySelector(".search-input");
 
 let query = 'random';
+let arr =[];
 
 console.log('Поиск реализовать пока не удалось');
 
-async function getData() {
-    const result = await fetch(`${url}?query=${query}&per_page=9&orientation=landscape&client_id=${accessKey}`)
+async function getData(ref) {
+    const result = await fetch(ref);
     const data = await result.json();
     
    
     console.log(data);
     
+        
+    const img = document.querySelectorAll('.img');
+    for(let i = 0; i < 9; i++) {
+        img[i].src = data.results[i].urls.regular;
+        img[i].alt = data.results[i].alt_description;
+    }
     
-           
+          
 };
-const data = getData(`${url}?query=${query}&per_page=9&orientation=landscape&client_id=${accessKey}`);
-console.log(data[0].results.urls.regular);
-
-function fill(){
-    const img = document.querySelectorAll(".img");
-    img.src = 'assets/svg/icons8-камера-24.png';
-}
-fill();
-
-
-    
-     
-    
+getData(`${url}?query=${query}&per_page=9&orientation=landscape&client_id=${accessKey}`);
