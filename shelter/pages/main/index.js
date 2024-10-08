@@ -31,7 +31,7 @@ body.addEventListener("click", (e) => {
  	if (!popupActive) {
 	filter.addEventListener("click", closeOnClick);
 	}
-});
+);
 
 const arrOfPets = [
     {
