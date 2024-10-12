@@ -17,9 +17,10 @@ const cardsCount = 12;
 
 
 
-(function mixCards() {
+function mixCards() {
     cards.forEach( card => card.style.order = Math.floor(Math.random() * cardsCount));
-})();
+};
+document.addEventListener("DOMContentLoaded", mixCards);
 
 backFace.forEach(card => card.addEventListener('click', openCard));
 
@@ -63,6 +64,7 @@ function openCard() {
 };
 
 newGameBtn.addEventListener('click', newGame);
+
 function newGame() {
     movesCount.length = 0;
     twoCardsOpened.length = 0;
@@ -72,11 +74,9 @@ function newGame() {
     newGameBtn.classList.remove('ifWin');
     winField.classList.remove('ifWin');
     winMessage.classList.remove('ifWin');
-    backFace.classList.toggle('open-card');
-};
+    backFace.forEach((el) => {
+        el.classList.remove('open-card');
+    });
+    mixCards();
 
-    
-
-
-
-
+    };
