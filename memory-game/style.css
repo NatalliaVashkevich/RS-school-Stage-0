@@ -18,38 +18,43 @@ body {
     flex-direction: column;
     background-color: rgb(88, 85, 85);
 }
+main {
+    display: flex;
+    height: 80%;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 1vw;
+}
+header {
+    padding-top: 1vw;
+}
 
 h1 {
     font-family: Creepster;
     color: rgb(255, 123, 0);
     text-align: center;
-    font-size: 3vw;
-}
-
-main {
-    display: flex;
-    height: 70%;
-    
-}
-
-.playing-field {
-    width: 50%;
-    display: flex;
-    margin-left: 20%;
+    font-size: 4vw;
 }
 
 .achieves-field {
     display: flex;
     flex-direction: column;
     font-family: Creepster;
-    font-size: 2vw;
+    font-size: 3.5vw;
     padding-left: 2%;
-  
 }
-.cards-field {
-    width: 100%;
+
+.playing-field {
+    width: min(65%, 450px);
+    height: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+    
 }
 
 .win-message {
@@ -57,8 +62,8 @@ main {
 }
 
 .memory-card {
-    width: 23%;
-    height: 30%;
+    width: 20%;
+    aspect-ratio: 2 / 2.8;
     margin: 1%;
     border: 2px solid black;
     border-radius: 5px;
@@ -83,9 +88,7 @@ main {
     min-height: 100%;
     position: absolute;
 }
-.back-face {
-    opacity: .5;
-}
+
 .back-face.open-card{
     opacity: 0;
     filter: brightness(5);
@@ -104,22 +107,22 @@ main {
     font-family: Creepster;
     margin: auto;
     color: white;
-    font-size: 4vw;
+    font-size: 5vw;
 }
 .new-game-button.ifWin {
     display: block;
-    padding: 5px;
+    padding: 10px;
     border: 3px solid orange;
     font-family: Creepster;
     border-radius: 3px;
-    font-size: 1.5vw;
+    font-size: 2vw;
     margin: 2vw;
     cursor: pointer;
 
 }
 .playing-field.ifWin {
     
-    background-image: url(assets/img/IMG_3806.JPG);
+    background-image: url(assets/img/IMG_3771.JPG);
     background-repeat: no-repeat;
     background-position-y: center;
     background-size: cover;
@@ -144,6 +147,6 @@ footer div {
 footer {
     align-content: center;
     display: flex;
-    margin-top: 5%;
+    margin-top: 1%;
     padding-left: 3%
 }
