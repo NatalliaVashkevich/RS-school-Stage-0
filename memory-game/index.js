@@ -9,22 +9,23 @@ const winMessage = document.querySelector('.win-message');
 const totalMoves = document.querySelector('.moves');
 const winField = document.querySelector('.win-field');
 const lastResults = document.querySelector('.last-results');
-localStorage.length = 10;
+const myAudio = document.querySelector('#audio');
+
 let movesCount = [];
 let twoCardsOpened = [];
 let openedCards = [];
 const cardsCount = 12;
 
-// function getResults() {
-    
-//     for(let i=0; i < 10; i++) {
-//         let key = localStorage.key(i);
-//         let res = document.createElement('p');
-//         res.innerHTML = localStorage.getItem(key);
-//         lastResults.append(res.innerHTML);
-//     } 
-
-// };
+function saveResults() {
+    for (i = 0; i < 10; i++) {
+        localStorage.setItem('moves', totalMoves.innerHTML);
+    }
+};
+function getResults() {
+    let res = document.createElement('li');
+    lastResults.appendChild(res);
+    res.innerHTML = localStorage.getItem('moves');
+};
 
 
 
@@ -32,7 +33,6 @@ function mixCards() {
     cards.forEach( card => card.style.order = Math.floor(Math.random() * cardsCount));
 };
 document.addEventListener("DOMContentLoaded", mixCards);
-//alert('Добрый день! Мне немного не хватило времени на реализацию функции извлечения последних результатов из Local storage. Если есть такая возможность, проверь мою работу завтра. Буду очень благодарна)');
 
 backFace.forEach(card => card.addEventListener('click', openCard));
 
@@ -70,7 +70,8 @@ function openCard() {
             newGameBtn.classList.toggle('ifWin');
             winField.classList.toggle('ifWin');
             winMessage.classList.toggle('ifWin');
-            localStorage.setItem('moves', totalMoves.innerHTML);
+            saveResults();
+            myAudio.play();
         }
     }
 };
@@ -90,6 +91,7 @@ function newGame() {
         el.classList.remove('open-card');
     });
     mixCards();
+    getResults();
     
     
     };
